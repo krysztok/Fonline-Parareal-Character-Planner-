@@ -1,0 +1,120 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\krzys\Desktop\release\09.02.2023\CharacterPlanner(new Java).exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\krzys\Desktop\release\09.02.2023\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\LLVM\bin;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin
+JRE paths:	;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\LLVM\bin;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\LLVM\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MATLAB\R2019a\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin\javaw.exe (OK)
+Version string: 1.018.000 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin\javaw.exe
+Launcher args:	-jar "C:\Users\krzys\Desktop\release\09.02.2023\CharacterPlanner(new Java).exe"
+Args length:	79/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\krzys\Desktop\release\09.02.2023\CharacterPlanner(new Java).exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\krzys\Desktop\release\09.02.2023\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\LLVM\bin;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin
+JRE paths:	;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\LLVM\bin;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\LLVM\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MATLAB\R2019a\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin\javaw.exe (OK)
+Version string: 1.018.000 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin\javaw.exe
+Launcher args:	-jar "C:\Users\krzys\Desktop\release\09.02.2023\CharacterPlanner(new Java).exe"
+Args length:	79/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\krzys\Desktop\release\09.02.2023\CharacterPlanner(older Java).exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\krzys\Desktop\release\09.02.2023\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\LLVM\bin;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin
+JRE paths:	;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\LLVM\bin;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\LLVM\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MATLAB\R2019a\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin\javaw.exe (OK)
+Version string: 1.018.000 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin\javaw.exe
+Launcher args:	-jar "C:\Users\krzys\Desktop\release\09.02.2023\CharacterPlanner(older Java).exe"
+Args length:	81/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\krzys\Desktop\release\09.02.2023\CharacterPlanner(older Java).exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\krzys\Desktop\release\09.02.2023\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\LLVM\bin;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin
+JRE paths:	;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\LLVM\bin;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin;C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin
+Check launcher:	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\LLVM\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\MATLAB\R2019a\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin\javaw.exe (OK)
+Version string: 1.018.000 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-18_windows-x64_bin\jdk-18\bin\javaw.exe
+Launcher args:	-jar "C:\Users\krzys\Desktop\release\09.02.2023\CharacterPlanner(older Java).exe"
+Args length:	81/32768 chars
+Exit code:	0
