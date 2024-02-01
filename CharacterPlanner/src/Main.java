@@ -36,8 +36,8 @@ public class Main {
         int width = (int)screenSize.getWidth();
         int height = (int)screenSize.getHeight();
 
-        int preferredWidth = 1129, preferredHeight = 819;
-        int imageWidth = 1113, imageHeight = 780;
+        int preferredWidth = 1129, preferredHeight = 851;
+        int imageWidth = 1113, imageHeight = 812;
 
         if(width < preferredWidth || height < preferredHeight) {
             if(width < preferredWidth){

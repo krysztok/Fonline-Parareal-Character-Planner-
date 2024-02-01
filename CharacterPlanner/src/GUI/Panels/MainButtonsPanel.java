@@ -22,7 +22,7 @@ public class MainButtonsPanel extends JPanel {
         width = 254;
         height = 17;
         xOffset = 12;
-        yOffset = 757;
+        yOffset = 789;
         setBounds(xOffset, yOffset, width, height);
         setLayout(null);
         setBackground(debug? debug1Color:transparentColor);

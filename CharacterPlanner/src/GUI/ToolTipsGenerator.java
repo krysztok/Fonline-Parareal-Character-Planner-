@@ -28,10 +28,11 @@ public class ToolTipsGenerator {
 
 
    public void generateNotChangingTips() {
-        traitsTipsMap.put("Bloody Mess", "<html>Bloody Mess <br> (+) Violent death animations <br> (+) +5% to your Critical Chance <br> <font color=\"red\">(-) -3 penalty to all Damage Resistance values</font></html>");
+        traitsTipsMap.put("Bloody Mess", "<html>Bloody Mess <br> (+) Violent death animations <br> (+) +5% overall the player's damage <br> <font color=\"red\">(-) -5 penalty to all Damage Resistance values</font></html>");
         traitsTipsMap.put("Bonehead", "<html>Bonehead <br> (+) -10 to critical roll of attacks aimed to your head/eyes <br> <font color=\"red\">(-) -1 Intelligence</font></html>");
         traitsTipsMap.put("Bruiser", "<html>Bruiser <br> (+) +4 Strength<br> (+) Doubled base melee damage  <br> <font color=\"red\">(-) -10 Radiation and Poison resistance <br> (-) -10 Healing Rate <br> (-) -1 to maximum Action Points</font></html>");
-        traitsTipsMap.put("Brutish Hulk", "<html>Brutish Hulk <br> (+) +1 hp for each level gained up to soft cap (24)<br>Both the bonus and penalty are doubled when taken with Bruiser Trait <br> <font color=\"red\">(-) -1 Charisma</font></html>");
+        traitsTipsMap.put("Brutish Hulk", "<html>Brutish Hulk <br> (+) +1 hp for each level gained up to soft cap (24)<br> (+) +1 hp at every level up from an odd numbered\n" +
+                "                level<br>Both the bonus and penalty are doubled when taken with Bruiser Trait <br> <font color=\"red\">(-) -1 Charisma</font></html>");
         traitsTipsMap.put("Chem Reliant", "<html>Chem Reliant <br> (+) doubled durration of drugs effects <br> <font color=\"red\">(-) -1/3 to current Hit Points healed with medicines</font></html>");
         traitsTipsMap.put("Fast Metabolism", "<html>Fast Metabolism <br> (+) healing rate every 10s instead of every 60s <br> <font color=\"red\">(-) halved duration of drug effects</font></html>");
         traitsTipsMap.put("Fast Shot", "<html>Fast Shot <br> (+) -1 AP cost for single shots (Single-handed weapons with aim mode) <br> (+) -2 AP cost for single shots (Two-handed weapons with aim mode) <br> (+)  +5 flat damage <br> <font color=\"red\">(-) Not possible to make aimed shots</font></html>");
@@ -58,7 +59,7 @@ public class ToolTipsGenerator {
         drugsTipsMap.put("Roentgen Rum", "<html>Roentgen Rum <br> (+) +20 Healing Rate<br> (+) +1 Charisma <br> <font color=\"red\"> (-) -1 Strength <br> (-) -2 Perception </font></html>");
         drugsTipsMap.put("Rot Gut", "<html>Rot Gut <br> (+) +10 Fire DR<br><font color=\"red\"> (-) -1 Perception <br> (-) -10 Max Hit Points </font></html>");
         drugsTipsMap.put("Cookie", "<html>Cookie <br> (+) +1 Action Point <br> (+) +10 Max Hit Points<br> (+) +20 Healing Rate</html>");
-        drugsTipsMap.put("Baked Fish", "<html>Baked Fish <br> (+) +20 Max Hit Points</html>");
+        //drugsTipsMap.put("Baked Fish", "<html>Baked Fish <br> (+) +20 Max Hit Points</html>");
    }
 
     public void generateChangingTips(Character character) {
@@ -88,20 +89,27 @@ public class ToolTipsGenerator {
        }
        mutie += "</html>";
 
-       drugsTipsMap.put("Mutie", mutie);
+       //drugsTipsMap.put("Mutie", mutie);
 
        /*********Perks*********/
         perksTipsMap.put("Action Boy(1)", "<html>Action Boy(1) <br> (+) +1 Action Point <br> Requirements: <br>");
         perksTipsMap.put("Action Boy(2)", "<html>Action Boy(2) <br> (+) +1 Action Point <br> Requirements: <br>");
         perksTipsMap.put("Adrenaline Rush", "<html>Adrenaline Rush <br> (+) HP loss effects DT's and DR's incremental increase at certain thresholds <br> Requirements: <br>");
         perksTipsMap.put("Better Criticals", "<html>Better Criticals <br> (+) Much more devastating critical hits <br> Requirements: <br>");
+        perksTipsMap.put("Blessed Are the Weak", "<html>Blessed Are the Weak <br> (+) Ability to heal weakened individuals <br> Requirements: <br>");
         perksTipsMap.put("Bonus Move", "<html>Bonus Move <br> (+) +2 APs that can only be expended for movement in turn-base combat <br>(+) +10 Movement Speed <br> Requirements: <br>");
         perksTipsMap.put("Bonus Ranged Damage(1)", "<html>Bonus Ranged Damage(1) <br> (+) +2 to the weapon's damage range when using small, big or energy guns <br> Requirements: <br>");
         perksTipsMap.put("Bonus Ranged Damage(2)", "<html>Bonus Ranged Damage(2) <br> (+) +2 to the weapon's damage range when using small, big or energy guns <br> Requirements: <br>");
-        perksTipsMap.put("Bonus Rate of Attack", "<html>Bonus Rate of Attack <br> (+) -1 AP cost of performing an attack (ranged or melee) <br> Requirements: <br>");
-        perksTipsMap.put("Close Combat Master", "<html>Close Combat Master <br> (+) +10 to melee damage <br> (+) +15% to critical hit chance for HtH/melee attacks<br>(+) +5 Movement Speed <br> Requirements: <br>");
-        perksTipsMap.put("Dodger(1)", "<html>Dodger(1)<br>(+) -5% to final Hit Chance (works only with melee/unarmed/throwing weapons in both hands) <br> (+) +5 Movement Speed <br> Requirements: <br>");
-        perksTipsMap.put("Dodger(2)", "<html>Dodger(2)<br>(+) -5% to final Hit Chance (works only with melee/unarmed/throwing weapons in both hands) <br> Requirements: <br>");
+        perksTipsMap.put("Bonus Rate of Fire", "<html>Bonus Rate of Fire <br> (+) -1 AP cost of performing an attack <br> Requirements: <br>");
+        perksTipsMap.put("Bonus HtH Attacks", "<html>Bonus HtH Attacks <br> (+) -1 AP to HtH attack cost  <br> (+) + 5 to Movement Speed <br> Requirements: <br>");
+        //perksTipsMap.put("Close Combat Master", "<html>Close Combat Master <br> (+) +10 to melee damage <br> (+) +15% to critical hit chance for HtH/melee attacks<br>(+) +5 Movement Speed <br> Requirements: <br>");
+        perksTipsMap.put("Bonus HtH Damage+", "<html>Bonus HtH Damage+ <br> (+) +15% to critical hit chance for HtH/melee attacks<br> Requirements: <br>");
+        perksTipsMap.put("Bonus HtH Damage", "<html>Bonus HtH Damage <br> (+) +7 to melee damage <br> (+) +5 Movement Speed <br> Requirements: <br>");
+        perksTipsMap.put("HtH Criticals", "<html>HtH Criticals<br> (+) Power of criticals increased by 25% when unarmed or using melee weapons <br> Requirements: <br>");
+        perksTipsMap.put("HtH Evade", "<html>HtH Evade<br> (+) +20 to AC when both item slots are empty <br> Requirements: <br>");
+        perksTipsMap.put("HtH Evade+", "<html>HtH Evade+<br> (+) +40 to AC when both item slots are empty <br> Requirements: <br>");
+        perksTipsMap.put("Dodger", "<html>Dodger<br>(+) +20 to AC <br> Requirements: <br>");
+        perksTipsMap.put("Dodger+", "<html>Dodger+<br>(+) +40 to AC <br> Requirements: <br>");
         perksTipsMap.put("Earlier Sequence", "<html>Earlier Sequence<br> (+) +2 to Sequence<br> Requirements: <br>");
         perksTipsMap.put("Even More Criticals", "<html>Even More Criticals<br> (+) +10% to critical hit chance<br> Requirements: <br>");
         perksTipsMap.put("Gain Agility", "<html>Gain Agility<br> (+) +1 Agility<br> Requirements: <br>");

@@ -18,6 +18,8 @@ public class HitPoints extends Stat {
     private int smittysMeal;
     private int enduranceImp;
     private Boolean isOdd;
+    private int brutishHulk;
+    private int bruiser;
 
     public HitPoints(String name) {
         super(name);
@@ -36,6 +38,8 @@ public class HitPoints extends Stat {
         smittysMeal = 0;
         enduranceImp = 0;
         isOdd = false;
+        brutishHulk = 0;
+        bruiser = 0;
     }
 
     @Override
@@ -51,6 +55,15 @@ public class HitPoints extends Stat {
         hpFromLevels = (level-1) * hpPerLevel; //-1 because no added hp on 1st level
         if(isOdd){
             hpFromLevels += (int)(level/2);
+        }
+
+        /*hp from traits*/
+        bruiser = character.getTraits().getTraitByName("Bruiser").isTaken()? 1 : 0;
+        brutishHulk = character.getTraits().getTraitByName("Brutish Hulk").isTaken()? 1 : 0;
+        int hpFromTraits = (int)((level-1)/2) * brutishHulk;
+
+        if(bruiser == 1){
+            hpFromTraits*=2;
         }
 
         /*hp from implants, perks, masteries and drugs*/
@@ -86,10 +99,10 @@ public class HitPoints extends Stat {
         buffout = character.getDrugs().getDrugByName("Buffout").isTaken()? 1 : 0;
         rotgut = character.getDrugs().getDrugByName("Rot Gut").isTaken()? 1 : 0;
         cookie = character.getDrugs().getDrugByName("Cookie").isTaken()? 1 : 0;
-        bakedFish = character.getDrugs().getDrugByName("Baked Fish").isTaken()? 1 : 0;
+        //bakedFish = character.getDrugs().getDrugByName("Baked Fish").isTaken()? 1 : 0;
 
 
-        int finalValue = base + hpFromLevels + 20 * nemeans + 50 * noiception + 40 * lifegivers + 100 * mutant +
+        int finalValue = base + hpFromLevels + hpFromTraits + 20 * nemeans + 50 * noiception + 40 * lifegivers + 100 * mutant +
                 50 * nightkin + 20 * tank + 20 * buffout + 20 * bakedFish - 10 * rotgut + 10 * cookie + 10 * wonderlandHp +
                 5 * smittysMeal + 2 * enduranceImp;
 

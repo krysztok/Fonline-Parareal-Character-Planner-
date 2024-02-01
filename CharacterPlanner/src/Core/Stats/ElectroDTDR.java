@@ -17,7 +17,7 @@ public class ElectroDTDR extends Stat {
         cerebralModem = character.getImplants().getImplantByName("Cerebral Modem").isTaken()? 1 : 0;
         bloodymess = character.getTraits().getTraitByName("Bloody Mess").isTaken()? 1 : 0;
 
-        int valueDR = 10 * cerebralModem - 3 * bloodymess;
+        int valueDR = 10 * cerebralModem - 5 * bloodymess;
         int valueDT = 0;
         setValue(valueDT);
         setSecondValueValue(valueDR);

@@ -33,14 +33,14 @@ public class PerksPanel extends JPanel {
         smallButtonIcon = iconsMap.get("smallButton");
         smallButtonPushedIcon = iconsMap.get("smallButtonPushed");
         width = 368;
-        height = 400;
+        height = 432;
         xOffset = 355;
         yOffset = 362;
         setBounds(xOffset, yOffset, width, height);
         setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
         setBackground(transparentColor);
 
-        perksMax = 50;
+        perksMax = 54;
         this.perksNames = perksNames;
         perksLabels = new ArrayList<JLabel>();
         buttons = new ArrayList<JButton>();

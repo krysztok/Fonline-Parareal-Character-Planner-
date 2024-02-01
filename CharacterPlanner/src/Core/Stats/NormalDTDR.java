@@ -52,7 +52,7 @@ public class NormalDTDR extends Stat {
         int dermalDt = dermals == 2 ? 1 : 0;
 
         int valueDT = 2 * toughness + 3 * evenTougher + dermalDt + 3 * mutant + 3 * nightkin + 2 * tank;
-        int valueDR = 5 * toughness + 10 * evenTougher - 15 * jet + 15 * psycho + 4 * dermals - 3 * bloodymess + 10 * mutant
+        int valueDR = 5 * toughness + 10 * evenTougher - 15 * jet + 15 * psycho + 4 * dermals - 5 * bloodymess + 10 * mutant
                 + 5 * nightkin + 5 * tank + 10 * sweetScience;
         setValue(valueDT);
         setSecondValueValue(valueDR);

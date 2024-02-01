@@ -52,7 +52,7 @@ public class GUI extends JPanel {
         setLayout(null);
         setOpaque(false);
         width = 1129;
-        height = 819;
+        height = 851;
         setSize(width,height);
         setPreferredSize(new Dimension(width, height));
         //setBounds(0, 0, width, height);
@@ -210,7 +210,7 @@ public class GUI extends JPanel {
     public void printScreen() throws IOException {
         BufferedImage img = ImageIO.read(getClass().getResource("/resources/graphics/background.png"));
         this.paint(img.getGraphics());
-        BufferedImage img2 = img.getSubimage(0,0,1113,780); // cut image
+        BufferedImage img2 = img.getSubimage(0,0,1113,812); // cut image
 
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Specify a file to save");

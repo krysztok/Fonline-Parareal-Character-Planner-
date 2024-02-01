@@ -104,7 +104,8 @@ public class Specials {
                 int roentgen = character.getDrugs().getDrugByName("Roentgen Rum").isTaken()? 1 : 0;
                 int cigs = character.getDrugs().getDrugByName("Cigarettes").isTaken()? 1 : 0;
                 int jet = character.getDrugs().getDrugByName("Jet").isTaken()? 1 : 0;
-                int mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
+                //int mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
+                int mutie = 0;
 
                 int mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
                 int nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
@@ -133,7 +134,8 @@ public class Specials {
             @Override
             void calculateFinalValue(Character character) {
                 int mentats = character.getDrugs().getDrugByName("Mentats").isTaken()? 1 : 0;
-                int mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
+                //int mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
+                int mutie = 0;
 
                 int mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
                 int nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;

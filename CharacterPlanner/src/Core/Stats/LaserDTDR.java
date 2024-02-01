@@ -32,7 +32,7 @@ public class LaserDTDR extends Stat {
 
         int phoenixDt = phoenix == 2 ? 1 : 0;
 
-        int valueDR = 4 * phoenix - 3 * bloodymess + 10 * wayOfTheFruit;
+        int valueDR = 4 * phoenix - 5 * bloodymess + 10 * wayOfTheFruit;
         int valueDT = phoenixDt;
         setValue(valueDT);
         setSecondValueValue(valueDR);

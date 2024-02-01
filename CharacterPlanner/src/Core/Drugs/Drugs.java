@@ -9,7 +9,7 @@ public class Drugs {
     public Drugs(){
         drugsMap = new LinkedHashMap<>();
 
-        Drug bakedFish = new Drug("Baked Fish");
+        //Drug bakedFish = new Drug("Baked Fish");
         Drug beer = new Drug("Beer");
         Drug booze = new Drug("Booze");
         Drug buffout = new Drug("Buffout");
@@ -19,14 +19,14 @@ public class Drugs {
         Drug gammaGulpBeer = new Drug("Gamma Gulp Beer");
         Drug jet = new Drug("Jet");
         Drug mentats = new Drug("Mentats");
-        Drug mutie = new Drug("Mutie");
+        //Drug mutie = new Drug("Mutie");
         Drug nukaCola = new Drug("Nuka-Cola");
         Drug psycho = new Drug("Psycho");
         Drug radX = new Drug("Rad-X");
         Drug roentgenRum = new Drug("Roentgen Rum");
         Drug rotGut = new Drug("Rot Gut");
 
-        drugsMap.put(bakedFish.getName(), bakedFish);
+        //drugsMap.put(bakedFish.getName(), bakedFish);
         drugsMap.put(beer.getName(), beer);
         drugsMap.put(booze.getName(), booze);
         drugsMap.put(buffout.getName(), buffout);
@@ -36,7 +36,7 @@ public class Drugs {
         drugsMap.put(gammaGulpBeer.getName(), gammaGulpBeer);
         drugsMap.put(jet.getName(), jet);
         drugsMap.put(mentats.getName(), mentats);
-        drugsMap.put(mutie.getName(), mutie);
+        //drugsMap.put(mutie.getName(), mutie);
         drugsMap.put(nukaCola.getName(), nukaCola);
         drugsMap.put(psycho.getName(), psycho);
         drugsMap.put(radX.getName(), radX);

@@ -31,7 +31,7 @@ public class FireDTDR extends Stat {
         }
 
         bloodymess = character.getTraits().getTraitByName("Bloody Mess").isTaken()? 1 : 0;
-        mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
+        //mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
         rotgut = character.getDrugs().getDrugByName("Rot Gut").isTaken()? 1 : 0;
 
         mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
@@ -40,7 +40,7 @@ public class FireDTDR extends Stat {
 
         int phoenixDt = phoenix == 2 ? 1 : 0;
 
-        int valueDR = 4 * phoenix - 3 * bloodymess + 10 * rotgut;
+        int valueDR = 4 * phoenix - 5 * bloodymess + 10 * rotgut;
         int valueDT = phoenixDt;
 
         if(mutant == 1 || nightkin == 1){
