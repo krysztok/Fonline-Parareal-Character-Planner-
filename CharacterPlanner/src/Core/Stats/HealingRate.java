@@ -27,7 +27,7 @@ public class HealingRate extends Stat {
     @Override
     void calculateValue(Character character) {
         int enImpsAndPerks = character.getSpecials().getSpecialByName("Endurance").getValueWithPerksAndImplants();
-        int base = (int)(12 + enImpsAndPerks / 2);
+        int base = (int)(7 + enImpsAndPerks / 2);
         fasterHealing = character.getSupportPerks().getPerkByName("Faster Healing").isTaken()? 1 : 0;
         livingAnatomy = character.getPerks().getPerkByName("Living Anatomy").isTaken()? 1 : 0;
         adrenalEnhancement = character.getImplants().getImplantByName("Adrenal Enhancer").isTaken()? 1 : 0;
@@ -38,6 +38,7 @@ public class HealingRate extends Stat {
         bruiser = character.getTraits().getTraitByName("Bruiser").isTaken()? 1 : 0;
 
         int finalValue = base + 20 * fasterHealing + 30 * livingAnatomy + 10 * adrenalEnhancement + 10 * mutant + 20 * wonderlandHr + 20 * roentgen + 20 * cookie - 10 * bruiser;
+        finalValue = finalValue<0? 0 : finalValue;
         setValue(finalValue);
     }
 

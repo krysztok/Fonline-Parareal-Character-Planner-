@@ -195,7 +195,7 @@ public class Perks {
         Perk hitTheGaps = new Perk("Hit the Gaps", level12Req, critCombatSkills150Req);
         Perk hthEvade = new Perk("HtH Evade", level6Req, cc75Req);
         Perk hthEvade2 = new Perk("HtH Evade+", level9Req, cc150Req);
-        Perk inYourFace = new Perk("In Your Face!", level9Req, combatSkills125Req);
+        Perk inYourFace = new Perk("In Your Face!", level6Req, combatSkills125Req);
         Perk lifegiver1 = new Perk("Lifegiver(1)", level12Req, en5Req);
         Perk lifegiver2 = new Perk("Lifegiver(2)", lifegiver2Reqs);
         Perk lifegiver3 = new Perk("Lifegiver(3)", lifegiver3Reqs);

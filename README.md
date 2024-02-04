@@ -37,3 +37,7 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 -removed close combat skill from better criticals perk requirements<br>
 -added Bonus HtH Attacks perk<br>
 -renamed "Bonus Rate of Attack" to "Bonus Rate of Fire" and removed close combat requirement<br>
+
+**04.02.2024**<br>
+-small fix to healing rate formula
+-In Your Face! level requirement fix
