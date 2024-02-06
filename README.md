@@ -39,5 +39,8 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 -renamed "Bonus Rate of Attack" to "Bonus Rate of Fire" and removed close combat requirement<br>
 
 **04.02.2024**<br>
--small fix to healing rate formula
--In Your Face! level requirement fix
+-small fix to healing rate formula<br>
+-In Your Face! level requirement fix<br>
+
+**06.02.2024**<br>
+-fixed The Good Doctor<br>

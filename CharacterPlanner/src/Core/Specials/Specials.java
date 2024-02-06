@@ -125,7 +125,8 @@ public class Specials {
             void calculateWithPerksAndImplantsValue(Character character) {
                 int gainSpecial = character.getPerks().getPerkByName("Gain Charisma").isTaken()? 1 : 0;
                 int specialImplant = character.getImplants().getImplantByName("SPECIAL +1 CH").isTaken()? 1 : 0;
-                int value = getBase() + gainSpecial + specialImplant;
+                int theGoodDoctor = character.getSupportPerks().getPerkByName("The Good Doctor").isTaken()? 1 : 0;
+                int value = getBase() + gainSpecial + specialImplant + theGoodDoctor;
                 setWithPerksAndImplants(value > 10? 10 : value);
             }
         };
