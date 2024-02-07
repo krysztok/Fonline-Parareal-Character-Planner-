@@ -10,6 +10,7 @@ public class CriticalChance extends Stat {
     private int eye;
     private int wonderlandCC;
     private int rambo;
+    private int dragoon;
 
     public CriticalChance(String name) {
         super(name);
@@ -20,6 +21,7 @@ public class CriticalChance extends Stat {
         eye = 0;
         wonderlandCC = 0;
         rambo = 0;
+        dragoon = 0;
     }
 
     @Override
@@ -32,8 +34,9 @@ public class CriticalChance extends Stat {
         eye = character.getImplants().getImplantByName("Eye").isTaken()? 1 : 0;
         wonderlandCC = character.getSupportPerks().getPerkByName("The art of the hunt").isTaken()? 1 : 0;
         rambo = character.getMasteries().getMasteryByName("Rambo").isTaken()? 1 : 0;
+        dragoon = character.getMasteries().getMasteryByName("Dragoon").isTaken()? 1 : 0;
 
-        int finalValue = lkDrugs + 10 * finesse + 5 * moreCritical + 10 * evenMoreCriticals /*+ 5 * bloodyMess*/ + 10 * eye + 3 * wonderlandCC + 5 * rambo;
+        int finalValue = lkDrugs + 10 * finesse + 5 * moreCritical + 10 * evenMoreCriticals /*+ 5 * bloodyMess*/ + 10 * eye + 3 * wonderlandCC + 5 * rambo + 5 * dragoon;
         setValue(finalValue);
     }
 

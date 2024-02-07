@@ -171,12 +171,13 @@ public class ToolTipsGenerator {
         });
 
         /*********Masteries*********/
-        masteriesTipsMap.put("Tank", "<html>Tank <br> (+) +20 max Hit Points <br> (+) +5 Normal DR <br> +2 Normal DT<br> Requirements: <br>");
-        masteriesTipsMap.put("Sweet Science", "<html>Sweet Science <br> (+) +10 Melee Damage <br> (+) +10 Normal DR <br> +5% to melee critical power rolls <br> Requirements: <br>");
+        masteriesTipsMap.put("Tank", "<html>Tank <br> (+) +20 max Hit Points <br> (+) +5 Normal DR <br> (+) +2 Normal DT<br> Requirements: <br>");
+        masteriesTipsMap.put("Sweet Science", "<html>Sweet Science <br> (+) +10 Melee Damage <br> (+) +10 Normal DR <br> (+) +5% to melee critical power rolls <br> Requirements: <br>");
         masteriesTipsMap.put("Sniper", "<html>Sniper<br> (+) Changes the critical chance calculation to a random roll of 1-13 against the attackers Luck <br> Requirements: <br>");
         masteriesTipsMap.put("Rambo", "<html>Rambo<br> (+) +1 damage to each bullet <br> (+) +5% Critical Chance <br> (+) +5% final dmg<br> Requirements: <br>");
-        masteriesTipsMap.put("Nightkin", "<html>Nightkin<br> (+) +50 max Hit Points <br> (+) +5 Normal DR <br> +3 Normal DT <br> (+) while in sneak, all successful rear attacks have Silent Death effect <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
-        masteriesTipsMap.put("Mutant", "<html>Mutant<br> (+) +100 max Hit Points <br> (+) +10 Healing rate <br> (+) +10 Normal DR <br> +3 Normal DT <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
+        masteriesTipsMap.put("Nightkin", "<html>Nightkin<br> (+) +50 max Hit Points <br> (+) +5 Normal DR <br> (+) +3 Normal DT <br> (+) while in sneak, all successful rear attacks have Silent Death effect <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
+        masteriesTipsMap.put("Mutant", "<html>Mutant<br> (+) +100 max Hit Points <br> (+) +10 Healing rate <br> (+) +10 Normal DR <br> (+) +3 Normal DT <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
+        masteriesTipsMap.put("Dragoon", "<html>Dragoon <br> (+) Players can make use of movement speed bonuses while using shotguns. <br> (+) +5 critical chance <br> (+) +10% Damage with shotguns.</html>");
 
         masteriesTipsMap.forEach((name, text) -> {
             String reqs = "";

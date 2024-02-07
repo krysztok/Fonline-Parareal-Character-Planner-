@@ -44,3 +44,6 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 
 **06.02.2024**<br>
 -fixed The Good Doctor<br>
+
+**07.02.2024**<br>
+-added Dragoon mastery<br>

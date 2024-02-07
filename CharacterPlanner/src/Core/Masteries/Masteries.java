@@ -23,7 +23,9 @@ public class Masteries {
         Mastery sniper = new Mastery("Sniper", levelReq);
         Mastery sweetScience = new Mastery("Sweet Science", levelReq);
         Mastery tank = new Mastery("Tank", levelReq);
+        Mastery dragoon = new Mastery("Dragoon", levelReq);
 
+        masteriesMap.put(dragoon.getName(), dragoon);
         masteriesMap.put(mutant.getName(), mutant);
         masteriesMap.put(nightkin.getName(), nightkin);
         masteriesMap.put(rambo.getName(), rambo);
