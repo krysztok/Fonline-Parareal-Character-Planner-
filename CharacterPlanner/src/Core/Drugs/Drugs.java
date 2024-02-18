@@ -19,7 +19,7 @@ public class Drugs {
         Drug gammaGulpBeer = new Drug("Gamma Gulp Beer");
         Drug jet = new Drug("Jet");
         Drug mentats = new Drug("Mentats");
-        //Drug mutie = new Drug("Mutie");
+        Drug mutie = new Drug("Mutie");
         Drug nukaCola = new Drug("Nuka-Cola");
         Drug psycho = new Drug("Psycho");
         Drug radX = new Drug("Rad-X");
@@ -36,7 +36,7 @@ public class Drugs {
         drugsMap.put(gammaGulpBeer.getName(), gammaGulpBeer);
         drugsMap.put(jet.getName(), jet);
         drugsMap.put(mentats.getName(), mentats);
-        //drugsMap.put(mutie.getName(), mutie);
+        drugsMap.put(mutie.getName(), mutie);
         drugsMap.put(nukaCola.getName(), nukaCola);
         drugsMap.put(psycho.getName(), psycho);
         drugsMap.put(radX.getName(), radX);

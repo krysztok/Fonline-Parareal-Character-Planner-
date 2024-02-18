@@ -31,7 +31,7 @@ public class FireDTDR extends Stat {
         }
 
         bloodymess = character.getTraits().getTraitByName("Bloody Mess").isTaken()? 1 : 0;
-        //mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
+        mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
         rotgut = character.getDrugs().getDrugByName("Rot Gut").isTaken()? 1 : 0;
 
         mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;

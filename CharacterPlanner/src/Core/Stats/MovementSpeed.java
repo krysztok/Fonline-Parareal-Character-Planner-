@@ -12,6 +12,7 @@ public class MovementSpeed extends Stat {
     private int smallFrame;
     private int heavyHanded;
     private int rightKnee;
+    private int actionBoy;
 
     public MovementSpeed(String name) {
         super(name);
@@ -24,6 +25,7 @@ public class MovementSpeed extends Stat {
         smallFrame = 0;
         heavyHanded = 0;
         rightKnee = 0;
+        actionBoy = 0;
     }
 
     @Override
@@ -33,6 +35,14 @@ public class MovementSpeed extends Stat {
             heaveHo = 1;
             if (character.getPerks().getPerkByName("Heave Ho!!").isTaken()){
                 heaveHo = 2;
+            }
+        }
+
+        actionBoy = 0;
+        if (character.getPerks().getPerkByName("Action Boy(1)").isTaken()){
+            actionBoy = 1;
+            if (character.getPerks().getPerkByName("Action Boy(2)").isTaken()){
+                actionBoy = 2;
             }
         }
 
@@ -47,7 +57,7 @@ public class MovementSpeed extends Stat {
 
         rightKnee = character.getImplants().getImplantByName("Right Knee").isTaken()? 1 : 0;
 
-        int finalValue = 5 * heaveHo + 5 * dodger + 5 * bonusHthDamage/*closeCombatMaster*/ + 5 * bonusHthAttacks + 10 * bonusMove + 5 * smallFrame - 10 * heavyHanded + 5 * rightKnee;
+        int finalValue = 5 * heaveHo + 5 * dodger + 5 * actionBoy + 5 * bonusHthDamage/*closeCombatMaster*/ + 5 * bonusHthAttacks + 10 * bonusMove + 5 * smallFrame - 10 * heavyHanded + 5 * rightKnee;
         setValue(finalValue);
     }
 

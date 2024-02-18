@@ -89,11 +89,11 @@ public class ToolTipsGenerator {
        }
        mutie += "</html>";
 
-       //drugsTipsMap.put("Mutie", mutie);
+       drugsTipsMap.put("Mutie", mutie);
 
        /*********Perks*********/
-        perksTipsMap.put("Action Boy(1)", "<html>Action Boy(1) <br> (+) +1 Action Point <br> Requirements: <br>");
-        perksTipsMap.put("Action Boy(2)", "<html>Action Boy(2) <br> (+) +1 Action Point <br> Requirements: <br>");
+        perksTipsMap.put("Action Boy(1)", "<html>Action Boy(1) <br> (+) +1 Action Point <br> (+) +5 Movement Speed<br> Requirements: <br>");
+        perksTipsMap.put("Action Boy(2)", "<html>Action Boy(2) <br> (+) +1 Action Point <br> (+) +5 Movement Speed<br> Requirements: <br>");
         perksTipsMap.put("Adrenaline Rush", "<html>Adrenaline Rush <br> (+) HP loss effects DT's and DR's incremental increase at certain thresholds <br> Requirements: <br>");
         perksTipsMap.put("Better Criticals", "<html>Better Criticals <br> (+) Much more devastating critical hits <br> Requirements: <br>");
         perksTipsMap.put("Blessed Are the Weak", "<html>Blessed Are the Weak <br> (+) Ability to heal weakened individuals <br> Requirements: <br>");
@@ -132,7 +132,7 @@ public class ToolTipsGenerator {
         perksTipsMap.put("Man of Steel", "<html>Man of Steel<br> (+) Increased resistance to critical hits <br> (+) -20 to enemy crit power rolls<br> Requirements: <br>");
         perksTipsMap.put("Medic", "<html>Medic<br> (+) Healing First Aid and Doctor cooldowns reduced by 50% <br> (+) Guarantee bonus of random +20-55 HP on every use of First Aid <br> (+) allows removal of KO on others with doctor skill<br> Requirements: <br>");
         perksTipsMap.put("More Critical", "<html>More Critical<br> (+) +5% Critical Chance<br> Requirements: <br>");
-        perksTipsMap.put("More Ranged Damage", "<html>More Ranged Damage<br> (+) +3 to a weapon's damage range when using small or big guns<br> Requirements: <br>");
+        perksTipsMap.put("More Ranged Damage", "<html>More Ranged Damage<br> (+) +4 to a weapon's damage range when using small or big guns<br> Requirements: <br>");
         perksTipsMap.put("Pyromaniac(1)", "<html>Pyromaniac(1)<br> (+) +20 to damage when using fire-based weaponry<br> Requirements: <br>");
         perksTipsMap.put("Pyromaniac(2)", "<html>Pyromaniac(2)<br> (+) +20 to damage when using fire-based weaponry<br> Requirements: <br>");
         perksTipsMap.put("Quick Pockets", "<html>Quick Pockets<br> (+) (Un)equipping/picking up items is done at half its normal AP cost <br> (+) Reloading cost reduced to 1 AP <br> Requirements: <br>");
@@ -173,11 +173,11 @@ public class ToolTipsGenerator {
         /*********Masteries*********/
         masteriesTipsMap.put("Tank", "<html>Tank <br> (+) +20 max Hit Points <br> (+) +5 Normal DR <br> (+) +2 Normal DT<br> Requirements: <br>");
         masteriesTipsMap.put("Sweet Science", "<html>Sweet Science <br> (+) +10 Melee Damage <br> (+) +10 Normal DR <br> (+) +5% to melee critical power rolls <br> Requirements: <br>");
-        masteriesTipsMap.put("Sniper", "<html>Sniper<br> (+) Changes the critical chance calculation to a random roll of 1-13 against the attackers Luck <br> Requirements: <br>");
-        masteriesTipsMap.put("Rambo", "<html>Rambo<br> (+) +1 damage to each bullet <br> (+) +5% Critical Chance <br> (+) +5% final dmg<br> Requirements: <br>");
+        masteriesTipsMap.put("Sniper", "<html>Sniper<br> (+) Changes the critical chance calculation to a random roll of 1-13 against attacker's luck for eye/head shots and 1-20 for other parts.<br> Requirements: <br>");
+        masteriesTipsMap.put("Rambo", "<html>Rambo<br> (+) +2 damage to each bullet <br> (+) +5% Critical Chance <br> (+) +5% final dmg<br> Requirements: <br>");
         masteriesTipsMap.put("Nightkin", "<html>Nightkin<br> (+) +50 max Hit Points <br> (+) +5 Normal DR <br> (+) +3 Normal DT <br> (+) while in sneak, all successful rear attacks have Silent Death effect <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
         masteriesTipsMap.put("Mutant", "<html>Mutant<br> (+) +100 max Hit Points <br> (+) +10 Healing rate <br> (+) +10 Normal DR <br> (+) +3 Normal DT <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
-        masteriesTipsMap.put("Dragoon", "<html>Dragoon <br> (+) Players can make use of movement speed bonuses while using shotguns. <br> (+) +5 critical chance <br> (+) +10% Damage with shotguns.</html>");
+        masteriesTipsMap.put("Dragoon", "<html>Dragoon <br> (+) Players can make use of movement speed bonuses while using shotguns. <br> (+) +5 critical chance <br> (+) +10% Damage with shotguns.<br> Requirements: <br>");
 
         masteriesTipsMap.forEach((name, text) -> {
             String reqs = "";

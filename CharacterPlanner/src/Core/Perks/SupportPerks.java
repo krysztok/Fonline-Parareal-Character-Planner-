@@ -26,6 +26,9 @@ public class SupportPerks {
         SpecialRequirement in6Req = new SpecialRequirement( "Intelligence", 6, true);
         SpecialRequirement in8Req = new SpecialRequirement( "Intelligence", 8, true);
 
+        /* SPECIAL drugged Requirements*/
+        SpecialDruggedRequirement ch6ReqDrugs = new SpecialDruggedRequirement( "Charisma", 6, true);
+
         /* Skills Requirements*/
         String sg = "Small Guns";
         String bg = "Big Guns";
@@ -184,7 +187,7 @@ public class SupportPerks {
         Perk scout = new Perk("Scout", out150Req);
         Perk scrounger = new Perk("Scrounger");
         Perk sexAppeal = new Perk("Sex Appeal", sp75Req);
-        Perk smittysMeal = new Perk("Smitty's Meal", ch6Req);
+        Perk smittysMeal = new Perk("Smitty's Meal", ch6ReqDrugs);
         Perk snakeater = new Perk("Snakeater", en6Req);
         Perk speaker = new Perk("Speaker", sp125Req);
         Perk stealthGirl = new Perk("Stealth Girl", stealthGirlReqs);

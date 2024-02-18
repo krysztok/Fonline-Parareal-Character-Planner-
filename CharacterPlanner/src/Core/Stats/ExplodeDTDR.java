@@ -31,7 +31,7 @@ public class ExplodeDTDR extends Stat {
         int dermalDt = dermals == 2 ? 1 : 0;
 
         bloodymess = character.getTraits().getTraitByName("Bloody Mess").isTaken()? 1 : 0;
-        //mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
+        mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
 
         mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
         nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;

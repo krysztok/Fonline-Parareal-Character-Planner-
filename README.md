@@ -47,3 +47,10 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 
 **07.02.2024**<br>
 -added Dragoon mastery<br>
+
+**18.02.2024**<br>
+-updated descriptions for More Ranged Damage , Sniper and Rambo (game Changelog: 07)<br>
+-added bonus movement speed to Action Boys (game Changelog: 07)<br>
+-enabled mutie drug (game Changelog: 10)<br>
+-Smitty's meal support perk can be taken with charisma boosted with drugs<br>
+-Quick pockets perk requires level 6 <br>
