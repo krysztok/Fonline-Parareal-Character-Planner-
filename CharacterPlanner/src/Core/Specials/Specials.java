@@ -50,9 +50,17 @@ public class Specials {
                 int rotgut = character.getDrugs().getDrugByName("Rot Gut").isTaken()? 1 : 0;
                 int fruit = character.getDrugs().getDrugByName("Fruit").isTaken()? 1 : 0;
 
+                int mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
+                int mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
+                int nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
+
                 int finalValue = getValueWithPerksAndImplants() - 2 * beer + cigs - 2 * psycho + 2 * mentats - booze - 2 * roentgen - rotgut;
                 if(character.getPerks().getPerkByName("Way of the Fruit").isTaken()) {
                     finalValue += 2 * fruit;
+                }
+
+                if(mutant == 1 || nightkin == 1) {
+                    finalValue -= 2 * mutie;
                 }
 
                 finalValue = finalValue > 10? 10 : finalValue;
@@ -104,16 +112,8 @@ public class Specials {
                 int roentgen = character.getDrugs().getDrugByName("Roentgen Rum").isTaken()? 1 : 0;
                 int cigs = character.getDrugs().getDrugByName("Cigarettes").isTaken()? 1 : 0;
                 int jet = character.getDrugs().getDrugByName("Jet").isTaken()? 1 : 0;
-                int mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
-
-                int mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
-                int nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
 
                 int finalValue = getValueWithPerksAndImplants() + beer + gamma + booze + roentgen - cigs - jet;
-
-                if(mutant == 1 || nightkin == 1) {
-                    finalValue -= 2 * mutie;
-                }
 
                 finalValue = finalValue > 10? 10 : finalValue;
                 finalValue = finalValue < 1? 1 : finalValue;
@@ -134,17 +134,7 @@ public class Specials {
             @Override
             void calculateFinalValue(Character character) {
                 int mentats = character.getDrugs().getDrugByName("Mentats").isTaken()? 1 : 0;
-                int mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
-
-                int mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
-                int nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
-
-
                 int finalValue = getValueWithPerksAndImplants() + 2 * mentats;
-
-                if(mutant == 1 || nightkin == 1) {
-                    finalValue -= 2 * mutie;
-                }
 
                 finalValue = finalValue > 10? 10 : finalValue;
                 finalValue = finalValue < 1? 1 : finalValue;
@@ -166,7 +156,16 @@ public class Specials {
                 int buffout = character.getDrugs().getDrugByName("Buffout").isTaken()? 1 : 0;
                 int gamma = character.getDrugs().getDrugByName("Gamma Gulp Beer").isTaken()? 1 : 0;
 
+                int mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
+                int mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
+                int nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
+
                 int finalValue = getValueWithPerksAndImplants() + 2 * gamma - buffout;
+
+                if(mutant == 1 || nightkin == 1) {
+                    finalValue += 3 * mutie;
+                }
+
                 finalValue = finalValue > 10? 10 : finalValue;
                 finalValue = finalValue < 1? 1 : finalValue;
                 setFinalValue(finalValue);

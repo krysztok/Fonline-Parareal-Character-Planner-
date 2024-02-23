@@ -54,3 +54,6 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 -enabled mutie drug (game Changelog: 10)<br>
 -Smitty's meal support perk can be taken with charisma boosted with drugs<br>
 -Quick pockets perk requires level 6 <br>
+
+**23.02.2024**<br>
+-Changed mutie effect <br>

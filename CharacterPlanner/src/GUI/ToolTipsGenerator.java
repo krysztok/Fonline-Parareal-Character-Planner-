@@ -78,7 +78,7 @@ public class ToolTipsGenerator {
        fruit += "</html>";
        drugsTipsMap.put("Fruit", fruit);
 
-       String mutie = "<html>Mutie <br> (+) +4 Fire DT <br> (+) +4 Explode DT<br><font color=\"red\"> (-) -2 Charisma <br> (-) -2 Intelligence</font> <br> Requirements: <br>";
+       String mutie = "<html>Mutie <br> (+) +3 Agility <br> <font color=\"red\"> (-) -2 Perception <br> (-) -20 Healing Rate</font> <br> Requirements: <br>";
        boolean hasMutant = character.getMasteries().getMasteryByName("Mutant").isTaken() || character.getMasteries().getMasteryByName("Nightkin").isTaken();
        if(!hasMutant){
            mutie += "<font color=\"red\">";
