@@ -47,7 +47,7 @@ public class ToolTipsGenerator {
         traitsTipsMap.put("Small Frame", "<html>Small Frame <br> (+) +1 to Agility <br> (+) +5 to Movement Speed <br> <font color=\"red\">(-) significantly reduced Carry Weight capacity <br> (-) using Weapons requiring a Strength of eight or more will injure you! </font></html>");
 
         drugsTipsMap.put("Beer", "<html>Beer <br> (+) +1 Endurance <br>(+) +1 Charisma <br> <font color=\"red\">(-) -2 Perception </font></html>");
-        drugsTipsMap.put("Buffout", "<html>Buffout <br> (+) +2 Strength <br> (+) +1 Endurance <br> (+) +20 Max Hit Points <br><font color=\"red\">(-) -1 Agility </font></html>");
+        drugsTipsMap.put("Buffout", "<html>Buffout <br> (+) +2 Strength <br> (+) +1 Endurance <br> (+) +15 Max Hit Points <br><font color=\"red\">(-) -1 Agility </font></html>");
         drugsTipsMap.put("Cigarettes", "<html>Cigarettes <br> (+) +1 Perception <br><font color=\"red\">(-) -1 Charisma </font></html>");
         drugsTipsMap.put("Jet", "<html>Jet <br> (+) +2 Action Points <br><font color=\"red\">(-) -15% Normal DR <br>(-) -1 Charisma <br>(-) -2 Strength</font></html>");
         drugsTipsMap.put("Mentats", "<html>Mentats <br> (+) +2 Intelligence <br> (+) +2 Perception <br><font color=\"red\"> (-) -2 Endurance</font></html>");
@@ -59,7 +59,7 @@ public class ToolTipsGenerator {
         drugsTipsMap.put("Roentgen Rum", "<html>Roentgen Rum <br> (+) +20 Healing Rate<br> (+) +1 Charisma <br> <font color=\"red\"> (-) -1 Strength <br> (-) -2 Perception </font></html>");
         drugsTipsMap.put("Rot Gut", "<html>Rot Gut <br> (+) +10 Fire DR<br><font color=\"red\"> (-) -1 Perception <br> (-) -10 Max Hit Points </font></html>");
         drugsTipsMap.put("Cookie", "<html>Cookie <br> (+) +1 Action Point <br> (+) +10 Max Hit Points<br> (+) +20 Healing Rate</html>");
-        //drugsTipsMap.put("Baked Fish", "<html>Baked Fish <br> (+) +20 Max Hit Points</html>");
+        drugsTipsMap.put("Baked Fish", "<html>Baked Fish <br> (+) +15 Max Hit Points</html>");
    }
 
     public void generateChangingTips(Character character) {
@@ -133,8 +133,8 @@ public class ToolTipsGenerator {
         perksTipsMap.put("Medic", "<html>Medic<br> (+) Healing First Aid and Doctor cooldowns reduced by 50% <br> (+) Guarantee bonus of random +20-55 HP on every use of First Aid <br> (+) allows removal of KO on others with doctor skill<br> Requirements: <br>");
         perksTipsMap.put("More Critical", "<html>More Critical<br> (+) +5% Critical Chance<br> Requirements: <br>");
         perksTipsMap.put("More Ranged Damage", "<html>More Ranged Damage<br> (+) +4 to a weapon's damage range when using small or big guns<br> Requirements: <br>");
-        perksTipsMap.put("Pyromaniac(1)", "<html>Pyromaniac(1)<br> (+) +20 to damage when using fire-based weaponry<br> Requirements: <br>");
-        perksTipsMap.put("Pyromaniac(2)", "<html>Pyromaniac(2)<br> (+) +20 to damage when using fire-based weaponry<br> Requirements: <br>");
+        perksTipsMap.put("Pyromaniac(1)", "<html>Pyromaniac(1)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +5 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
+        perksTipsMap.put("Pyromaniac(2)", "<html>Pyromaniac(2)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +5 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
         perksTipsMap.put("Quick Pockets", "<html>Quick Pockets<br> (+) (Un)equipping/picking up items is done at half its normal AP cost <br> (+) Reloading cost reduced to 1 AP <br> Requirements: <br>");
         perksTipsMap.put("Quick Recovery", "<html>Quick Recovery<br> (+) Recovering from knock downs/knock outs costs significantly fewer APs than it normally would<br> Requirements: <br>");
         perksTipsMap.put("Right Between the Eyes", "<html>Right Between the Eyes<br> (+) -50% to your target's helmet's critical modifiers<br> Requirements: <br>");
@@ -146,7 +146,7 @@ public class ToolTipsGenerator {
         perksTipsMap.put("Toughness", "<html>Toughness<br> (+) +2 Normal DT <br> (+) +5 Normal DR<br> Requirements: <br>");
         perksTipsMap.put("Even Tougher", "<html>Even Tougher<br> (+) +3 Normal DT <br> (+) +10 Normal DR<br> Requirements: <br>");
         perksTipsMap.put("Way of the Fruit", "<html>Way of the Fruit<br> (+) +2 Perception, +10% plasma DR, +10% laser DR - when eat apple<br> Requirements: <br>");
-        perksTipsMap.put("Weapon Handling", "<html>Weapon Handling<br> (+) +2 to Strength when calculating chance to hit <br> +10 flat damage to big guns also energy big guns only<br> Requirements: <br>");
+        perksTipsMap.put("Weapon Handling", "<html>Weapon Handling<br> (+) +2 to Strength when calculating chance to hit <br>(+) +10 flat damage to big guns also energy big guns only<br> Requirements: <br>");
 
         perksTipsMap.forEach((name, text) -> {
             String reqs = "";
@@ -221,7 +221,7 @@ public class ToolTipsGenerator {
        implantsTipsMap.put("Left Hand", "<html>Left Hand <br> (+) ou suffer fewer weapon drops and arm cripples<br> Requirements: <br>");
        implantsTipsMap.put("Nociception clamp", "<html>Nociception clamp <br> (+) +50 max Hit Points <br> Requirements: <br>");
        implantsTipsMap.put("Eye", "<html>Eye <br> (+) +10% Critical Chance <br> Requirements: <br>");
-       implantsTipsMap.put("Adrenal Enhancer", "<html>Adrenal Enhancer <br> (+) (+)  +10 Healing Rate <br> Requirements: <br>");
+       implantsTipsMap.put("Adrenal Enhancer", "<html>Adrenal Enhancer <br> (+) +10 Healing Rate <br> Requirements: <br>");
        implantsTipsMap.put("Liver Box", "<html>Liver Box <br> (+) +15% Radiation and Poison Resistanc <br> Requirements: <br>");
        implantsTipsMap.put("Cerebral Modem", "<html>Cerebral Modem <br> (+) +10% Electric DR <br> Requirements: <br>");
 

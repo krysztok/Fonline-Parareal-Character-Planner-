@@ -207,7 +207,7 @@ public class Perks {
         Perk moreRangedDamage = new Perk("More Ranged Damage", level15Req, distanceCombatSkills200Req);
         Perk pyromaniac1 = new Perk("Pyromaniac(1)", level9Req, gunsSkills100Req);
         Perk pyromaniac2 = new Perk("Pyromaniac(2)", pyromaniac2Reqs);
-        Perk quickPockets = new Perk("Quick Pockets", level6Req, ag5Req);
+        Perk quickPockets = new Perk("Quick Pockets", level3Req, ag5Req);
         Perk quickRecovery = new Perk("Quick Recovery", level3Req, ag6Req);
         Perk rightBetweenTheEyes = new Perk ("Right Between the Eyes", level15Req, critCombatSkills200Req);
         Perk sharpshooter = new Perk("Sharpshooter", level9Req, distanceCombatSkills150Req);

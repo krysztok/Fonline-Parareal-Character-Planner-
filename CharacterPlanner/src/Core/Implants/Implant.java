@@ -44,8 +44,8 @@ public class Implant {
         return true;
     }
 
-    public void takeImplant() {
-        if(meetsRequirements()){
+    public void takeImplant(boolean cheatsOn) {
+        if(meetsRequirements() || cheatsOn){
             taken = true;
         }
     }

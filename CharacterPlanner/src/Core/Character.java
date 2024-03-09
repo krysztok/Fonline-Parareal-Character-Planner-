@@ -30,11 +30,13 @@ public class Character {
     private SupportPerks supportPerks;
     private Stats stats;
     private Boolean isCreated;
+    private Boolean cheatsOn;
 
     public Character(){
         level = 1;
         exp = 0;
         isCreated = false;
+        cheatsOn = false;
 
         specials = new Specials();
         traits = new Traits();
@@ -271,7 +273,7 @@ public class Character {
     }
 
     public void takeDrug(String drugName) {
-        if(isCreated){
+        if(isCreated || cheatsOn){
             drugs.takeDrug(drugName);
             skills.confirmSkills();
             calculate();
@@ -285,13 +287,17 @@ public class Character {
     }
 
     public void takeMastery(String masteryName) {
+        if(!isCreated){
+            cheatsOn = !cheatsOn;
+        }
+
         masteries.takeMastery(masteryName);
         skills.confirmSkills();
         calculate();
     }
 
     public void takeImplant(String implantName) {
-        implants.takeImplant(implantName);
+        implants.takeImplant(implantName, cheatsOn);
         skills.confirmSkills();
         calculate();
     }
@@ -337,5 +343,13 @@ public class Character {
 
     public boolean perkAlert() {
         return perks.perkAlert(level);
+    }
+
+    public Boolean getCheatsOn() {
+        return cheatsOn;
+    }
+
+    public void setCheatsOn(Boolean cheatsOn) {
+        this.cheatsOn = cheatsOn;
     }
 }

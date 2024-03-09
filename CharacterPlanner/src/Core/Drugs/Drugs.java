@@ -9,7 +9,7 @@ public class Drugs {
     public Drugs(){
         drugsMap = new LinkedHashMap<>();
 
-        //Drug bakedFish = new Drug("Baked Fish");
+        Drug bakedFish = new Drug("Baked Fish");
         Drug beer = new Drug("Beer");
         Drug booze = new Drug("Booze");
         Drug buffout = new Drug("Buffout");
@@ -26,7 +26,7 @@ public class Drugs {
         Drug roentgenRum = new Drug("Roentgen Rum");
         Drug rotGut = new Drug("Rot Gut");
 
-        //drugsMap.put(bakedFish.getName(), bakedFish);
+        drugsMap.put(bakedFish.getName(), bakedFish);
         drugsMap.put(beer.getName(), beer);
         drugsMap.put(booze.getName(), booze);
         drugsMap.put(buffout.getName(), buffout);

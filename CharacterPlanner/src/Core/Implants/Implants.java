@@ -220,8 +220,8 @@ public class Implants {
         return unAvailableImplants;
     }
 
-    public void takeImplant(String name){
-        getImplantByName(name).takeImplant();
+    public void takeImplant(String name, boolean cheatsOn){
+        getImplantByName(name).takeImplant(cheatsOn);
     }
 
 }

@@ -99,11 +99,11 @@ public class HitPoints extends Stat {
         buffout = character.getDrugs().getDrugByName("Buffout").isTaken()? 1 : 0;
         rotgut = character.getDrugs().getDrugByName("Rot Gut").isTaken()? 1 : 0;
         cookie = character.getDrugs().getDrugByName("Cookie").isTaken()? 1 : 0;
-        //bakedFish = character.getDrugs().getDrugByName("Baked Fish").isTaken()? 1 : 0;
+        bakedFish = character.getDrugs().getDrugByName("Baked Fish").isTaken()? 1 : 0;
 
 
         int finalValue = base + hpFromLevels + hpFromTraits + 20 * nemeans + 50 * noiception + 40 * lifegivers + 100 * mutant +
-                50 * nightkin + 20 * tank + 20 * buffout + 20 * bakedFish - 10 * rotgut + 10 * cookie + 10 * wonderlandHp +
+                50 * nightkin + 20 * tank + 15 * buffout + 15 * bakedFish - 10 * rotgut + 10 * cookie + 10 * wonderlandHp +
                 5 * smittysMeal + 2 * enduranceImp;
 
         setValue(finalValue);

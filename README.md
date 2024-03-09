@@ -57,3 +57,9 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 
 **23.02.2024**<br>
 -Changed mutie effect <br>
+
+**09.03.2024**<br>
+-Enabled baked fish <br>
+-Changed hp bonus from buffout <br>
+-Changed Pyromaniacs descriptions <br>
+-Changed Quick Pockets perk level requirement from 6 to 3 <br>
