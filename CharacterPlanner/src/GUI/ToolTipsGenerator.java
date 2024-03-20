@@ -32,7 +32,7 @@ public class ToolTipsGenerator {
         traitsTipsMap.put("Bonehead", "<html>Bonehead <br> (+) -10 to critical roll of attacks aimed to your head/eyes <br> <font color=\"red\">(-) -1 Intelligence</font></html>");
         traitsTipsMap.put("Bruiser", "<html>Bruiser <br> (+) +4 Strength<br> (+) Doubled base melee damage  <br> <font color=\"red\">(-) -10 Radiation and Poison resistance <br> (-) -10 Healing Rate <br> (-) -1 to maximum Action Points</font></html>");
         traitsTipsMap.put("Brutish Hulk", "<html>Brutish Hulk <br> (+) +1 hp for each level gained up to soft cap (24)<br> (+) +1 hp at every level up from an odd numbered\n" +
-                "                level<br>Both the bonus and penalty are doubled when taken with Bruiser Trait <br> <font color=\"red\">(-) -1 Charisma</font></html>");
+                "                level<br>Both the bonus and penalty are doubled when taken with Bruiser Trait <br> <font color=\"red\">(-) -1 Charisma</font><br> <font color=\"orange\">NOTE: +35 hp total (+70 with Bruiser trait)</font></html>");
         traitsTipsMap.put("Chem Reliant", "<html>Chem Reliant <br> (+) doubled durration of drugs effects <br> <font color=\"red\">(-) -1/3 to current Hit Points healed with medicines</font></html>");
         traitsTipsMap.put("Fast Metabolism", "<html>Fast Metabolism <br> (+) healing rate every 10s instead of every 60s <br> <font color=\"red\">(-) halved duration of drug effects</font></html>");
         traitsTipsMap.put("Fast Shot", "<html>Fast Shot <br> (+) -1 AP cost for single shots (Single-handed weapons with aim mode) <br> (+) -2 AP cost for single shots (Two-handed weapons with aim mode) <br> (+)  +5 flat damage <br> <font color=\"red\">(-) Not possible to make aimed shots</font></html>");
@@ -133,8 +133,8 @@ public class ToolTipsGenerator {
         perksTipsMap.put("Medic", "<html>Medic<br> (+) Healing First Aid and Doctor cooldowns reduced by 50% <br> (+) Guarantee bonus of random +20-55 HP on every use of First Aid <br> (+) allows removal of KO on others with doctor skill<br> Requirements: <br>");
         perksTipsMap.put("More Critical", "<html>More Critical<br> (+) +5% Critical Chance<br> Requirements: <br>");
         perksTipsMap.put("More Ranged Damage", "<html>More Ranged Damage<br> (+) +4 to a weapon's damage range when using small or big guns<br> Requirements: <br>");
-        perksTipsMap.put("Pyromaniac(1)", "<html>Pyromaniac(1)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +5 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
-        perksTipsMap.put("Pyromaniac(2)", "<html>Pyromaniac(2)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +5 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
+        perksTipsMap.put("Pyromaniac(1)", "<html>Pyromaniac(1)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +1-2 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
+        perksTipsMap.put("Pyromaniac(2)", "<html>Pyromaniac(2)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +1-2 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
         perksTipsMap.put("Quick Pockets", "<html>Quick Pockets<br> (+) (Un)equipping/picking up items is done at half its normal AP cost <br> (+) Reloading cost reduced to 1 AP <br> Requirements: <br>");
         perksTipsMap.put("Quick Recovery", "<html>Quick Recovery<br> (+) Recovering from knock downs/knock outs costs significantly fewer APs than it normally would<br> Requirements: <br>");
         perksTipsMap.put("Right Between the Eyes", "<html>Right Between the Eyes<br> (+) -50% to your target's helmet's critical modifiers<br> Requirements: <br>");
@@ -173,7 +173,7 @@ public class ToolTipsGenerator {
         /*********Masteries*********/
         masteriesTipsMap.put("Tank", "<html>Tank <br> (+) +20 max Hit Points <br> (+) +5 Normal DR <br> (+) +2 Normal DT<br> Requirements: <br>");
         masteriesTipsMap.put("Sweet Science", "<html>Sweet Science <br> (+) +10 Melee Damage <br> (+) +10 Normal DR <br> (+) +5% to melee critical power rolls <br> Requirements: <br>");
-        masteriesTipsMap.put("Sniper", "<html>Sniper<br> (+) Changes the critical chance calculation to a random roll of 1-13 against attacker's luck for eye/head shots and 1-20 for other parts.<br> Requirements: <br>");
+        masteriesTipsMap.put("Sniper", "<html>Sniper<br> (+) Changes the critical chance calculation to a random roll of 1-13 against attacker's luck for eye/head shots and 1-20 for other parts.<br> (+) adds the players Intelligence x 1 to the critical power roll<br><font color=\"orange\">NOTE: Works only for aimed shots from two handed weapons</font><br> Requirements: <br>");
         masteriesTipsMap.put("Rambo", "<html>Rambo<br> (+) +2 damage to each bullet <br> (+) +5% Critical Chance <br> (+) +5% final dmg<br> Requirements: <br>");
         masteriesTipsMap.put("Nightkin", "<html>Nightkin<br> (+) +50 max Hit Points <br> (+) +5 Normal DR <br> (+) +3 Normal DT <br> (+) while in sneak, all successful rear attacks have Silent Death effect <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
         masteriesTipsMap.put("Mutant", "<html>Mutant<br> (+) +100 max Hit Points <br> (+) +10 Healing rate <br> (+) +10 Normal DR <br> (+) +3 Normal DT <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
@@ -279,7 +279,7 @@ public class ToolTipsGenerator {
         supportsTipsMap.put("Scout", "<html>Scout<br> (+) Faster revealing of the covered areas of the world map<br> (+) More chance of find a special encounter<br>Requirements: <br>");
         supportsTipsMap.put("Scrounger", "<html>Scrounger<br> (+) more ammo from lockers or backpacks in random encounters<br> Requirements: <br>");
         supportsTipsMap.put("Sex Appeal", "<html>Sex Appeal<br> (+) +250 to reputation when interacting with the opposite sex<br> Requirements: <br>");
-        supportsTipsMap.put("Smitty's Meal", "<html>Smitty's Meal<br> (+) +5 max Hit Points<br> Requirements: <br>");
+        supportsTipsMap.put("Smitty's Meal", "<html>Smitty's Meal<br> (+) +5 max Hit Points<br><font color=\"orange\">NOTE: Reward for Smitty's Meal quest</font> <br> Requirements: <br>");
         supportsTipsMap.put("Snakeater", "<html>Snakeater<br> (+) +20% to Radiation Resistance <br> (+) +30% to Poison Resistance<br> Requirements: <br>");
         supportsTipsMap.put("Speaker", "<html>Speaker<br> (+) Your followers' loyalty decreases at half the normal rate<br> Requirements: <br>");
         supportsTipsMap.put("Stealth Girl", "<html>Stealth Girl<br> (+) Doubled stealth boy's battery life<br> Requirements: <br>");
@@ -289,9 +289,9 @@ public class ToolTipsGenerator {
         supportsTipsMap.put("The Good Doctor", "<html>The Good Doctor<br> (+) +1 Charisma<br> Requirements: <br>");
         supportsTipsMap.put("Thief", "<html>Thief<br> (+) Luck/50 chance of no cooldown if a stealing attempt has failed<br> Requirements: <br>");
         supportsTipsMap.put("Treasure Hunter", "<html>Treasure Hunter<br> (+) Additional items spawn in lockers in random encounters<br> Requirements: <br>");
-        supportsTipsMap.put("Surviving in the wild", "<html>Surviving in the wild <br> (+) +10 max Hit Points<br> Requirements: <br>");
-        supportsTipsMap.put("The art of the hunt", "<html>The art of the hunt <br> (+) +3% Critical Chance<br> Requirements: <br>");
-        supportsTipsMap.put("Basic Field Medicine", "<html>Basic Field Medicine <br> (+) +20 Healing Rate<br> Requirements: <br>");
+        supportsTipsMap.put("Surviving in the wild", "<html>Surviving in the wild <br> (+) +10 max Hit Points <br> <font color=\"orange\">NOTE: Reward for Wonderland quest</font><br> Requirements: <br>");
+        supportsTipsMap.put("The art of the hunt", "<html>The art of the hunt <br> (+) +3% Critical Chance <br> <font color=\"orange\">NOTE: Reward for Wonderland quest</font><br> Requirements: <br>");
+        supportsTipsMap.put("Basic Field Medicine", "<html>Basic Field Medicine <br> (+) +20 Healing Rate <br> <font color=\"orange\">NOTE: Reward for Wonderland quest</font><br> Requirements: <br>");
 
         supportsTipsMap.forEach((name, text) -> {
             String reqs = "";

@@ -136,22 +136,22 @@ public class Traits {
             }
         };
 
-        traitsMap.put(bloodyMess.getName(), bloodyMess);
-        traitsMap.put(bonehead.getName(), bonehead);
-        traitsMap.put(bruiser.getName(), bruiser);
-        traitsMap.put(brutishHulk.getName(), brutishHulk);
-        traitsMap.put(chemReliant.getName(), chemReliant);
         traitsMap.put(fastMetabolism.getName(), fastMetabolism);
-        traitsMap.put(fastShot.getName(), fastShot);
-        traitsMap.put(finesse.getName(), finesse);
-        traitsMap.put(gifted.getName(), gifted);
-        traitsMap.put(goodNatured.getName(), goodNatured);
-        traitsMap.put(heavyHanded.getName(), heavyHanded);
-        traitsMap.put(jinxed.getName(), jinxed);
-        traitsMap.put(kamikaze.getName(), kamikaze);
-        traitsMap.put(loner.getName(), loner);
-        traitsMap.put(oneHander.getName(), oneHander);
+        traitsMap.put(bruiser.getName(), bruiser);
         traitsMap.put(smallFrame.getName(), smallFrame);
+        traitsMap.put(oneHander.getName(), oneHander);
+        traitsMap.put(finesse.getName(), finesse);
+        traitsMap.put(kamikaze.getName(), kamikaze);
+        traitsMap.put(heavyHanded.getName(), heavyHanded);
+        traitsMap.put(fastShot.getName(), fastShot);
+        traitsMap.put(bloodyMess.getName(), bloodyMess);
+        traitsMap.put(jinxed.getName(), jinxed);
+        traitsMap.put(goodNatured.getName(), goodNatured);
+        traitsMap.put(chemReliant.getName(), chemReliant);
+        traitsMap.put(brutishHulk.getName(), brutishHulk);
+        traitsMap.put(bonehead.getName(), bonehead);
+        traitsMap.put(gifted.getName(), gifted);
+        traitsMap.put(loner.getName(), loner);
     }
 
     public Trait getTraitByName(String name) {

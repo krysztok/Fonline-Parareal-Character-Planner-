@@ -64,13 +64,14 @@ public class Skills {
             }
         };
 
-        Skill scavenger = new Skill("Scavenger", 300) {
+        Skill scavenger = new Skill("Scavenging", 300) {
             @Override
             void calculateBaseValue(Character character) {
-                //int tagged = isSkillTagged()? 20:0;
+                int tagged = isSkillTagged()? 20:0;
                 //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
-                //setSkillBase(1 + tagged - gifted);
-                setSkillBase(0);
+                int luck = character.getSpecials().getSpecialByName("Luck").getBase();
+
+                setSkillBase(luck + tagged /*- gifted*/);
             }
         };
 
@@ -94,7 +95,7 @@ public class Skills {
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(4 * (perception + intelligence) + tagged /*- gifted*/);
+                setSkillBase(2 * (perception + intelligence) + tagged /*- gifted*/);
             }
         };
 
@@ -282,10 +283,6 @@ public class Skills {
     }
 
     public void setTagSkill(String skillName) {
-        if(skillName.equals("Scavenger")) {
-            return;
-        }
-
         Skill skill = getSkillByName(skillName);
 
 

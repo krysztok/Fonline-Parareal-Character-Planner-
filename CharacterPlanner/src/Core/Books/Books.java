@@ -20,7 +20,7 @@ public class Books {
         Book bigGunsBook = new Book("Big Guns Magazine", skills.getSkillByName("Big Guns"));
         Book energyWeaponsBook = new Book("Guns and Cells", skills.getSkillByName("Energy Weapons"));
         Book closeCombatBook = new Book("Way of the Fist", skills.getSkillByName("Close Combat"));
-        Book scavengerBook = new Book("Not Used", skills.getSkillByName("Scavenger"));
+        Book scavengingBook = new Book("Not Used", skills.getSkillByName("Scavenging"));
         Book throwingBook = new Book("Throwing Magazine", skills.getSkillByName("Throwing"));
         Book firstAidBook = new Book("First Aid Book", skills.getSkillByName("First Aid"));
         Book doctorBook = new Book("Advanced Medicine", skills.getSkillByName("Doctor"));
@@ -40,7 +40,7 @@ public class Books {
         booksMap.put(bigGunsBook.getSkill().getName(), bigGunsBook);
         booksMap.put(energyWeaponsBook.getSkill().getName(), energyWeaponsBook);
         booksMap.put(closeCombatBook.getSkill().getName(), closeCombatBook);
-        booksMap.put(scavengerBook.getSkill().getName(), scavengerBook);
+        booksMap.put(scavengingBook.getSkill().getName(), scavengingBook);
         booksMap.put(throwingBook.getSkill().getName(), throwingBook);
         booksMap.put(firstAidBook.getSkill().getName(), firstAidBook);
         booksMap.put(doctorBook.getSkill().getName(), doctorBook);
@@ -65,7 +65,7 @@ public class Books {
 
     public void readAllBooks(){
         booksMap.forEach((name, book) -> {
-            if(!book.getSkill().getName().equals("Scavenger") && !book.getSkill().getName().equals("Gambling")) {
+            if(!book.getSkill().getName().equals("Scavenging") && !book.getSkill().getName().equals("Gambling")) {
                 for(int i = book.getRead(); i < booksLimit; i++){
                     book.readBook(this, booksSkillPoints);
                 }

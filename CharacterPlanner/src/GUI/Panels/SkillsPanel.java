@@ -233,7 +233,6 @@ public class SkillsPanel extends JPanel {
         }
 
         /*Scavenging and Gambling*/
-        tagButtons.get(4).setVisible(false);
         plusSkillButtons.get(4).setVisible(false);
         minusSkillButtons.get(4).setVisible(false);
         plusBooksButtons.get(4).setVisible(false);

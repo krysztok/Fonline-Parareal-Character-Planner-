@@ -63,3 +63,14 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 -Changed hp bonus from buffout <br>
 -Changed Pyromaniacs descriptions <br>
 -Changed Quick Pockets perk level requirement from 6 to 3 <br>
+
+**20.03.2024**<br>
+-changed Pyromaniacs description <br>
+-changed Sniper description <br>
+-fixed first aid skill base value <br>
+-renamed scavenger to scavenging <br>
+-added scavenging skill base value <br>
+-enabled tagging scavenging <br>
+-changed order of traits <br>
+-fixed Brutish Hulk hp bonus <br>
+-added notes to Brutish Hulk trait and quests rewards <br>

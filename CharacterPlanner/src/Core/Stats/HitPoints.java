@@ -57,10 +57,10 @@ public class HitPoints extends Stat {
             hpFromLevels += (int)(level/2);
         }
 
-        /*hp from traits*/
+        /*hp from traits (Odds from brutish hulk)*/
         bruiser = character.getTraits().getTraitByName("Bruiser").isTaken()? 1 : 0;
         brutishHulk = character.getTraits().getTraitByName("Brutish Hulk").isTaken()? 1 : 0;
-        int hpFromTraits = (int)((level-1)/2) * brutishHulk;
+        int hpFromTraits = (int)(level/2) * brutishHulk;
 
         if(bruiser == 1){
             hpFromTraits*=2;
