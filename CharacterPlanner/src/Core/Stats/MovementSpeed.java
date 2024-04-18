@@ -58,6 +58,12 @@ public class MovementSpeed extends Stat {
         rightKnee = character.getImplants().getImplantByName("Right Knee").isTaken()? 1 : 0;
 
         int finalValue = 5 * heaveHo + 5 * dodger + 5 * actionBoy + 5 * bonusHthDamage/*closeCombatMaster*/ + 5 * bonusHthAttacks + 10 * bonusMove + 5 * smallFrame - 10 * heavyHanded + 5 * rightKnee;
+
+        /*cap*/
+        if (finalValue > 40 ){
+            finalValue = 40;
+        }
+
         setValue(finalValue);
     }
 

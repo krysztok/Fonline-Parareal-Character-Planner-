@@ -74,3 +74,9 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 -changed order of traits <br>
 -fixed Brutish Hulk hp bonus <br>
 -added notes to Brutish Hulk trait and quests rewards <br>
+
+**19.04.2024**<br>
+-removed close combat skill from right between the eyes perk requirements<br>
+-added cap to movement speed (40)<br>
+-takable elements change color when mouse is over them + can be taken by clicking on name (not only by button)<br>
+-tips(e.g. perk descriptions) now show faster <br>

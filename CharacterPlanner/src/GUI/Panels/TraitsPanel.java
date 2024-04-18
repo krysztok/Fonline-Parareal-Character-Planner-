@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -18,16 +20,18 @@ public class TraitsPanel extends JPanel {
     private List<JLabel> traitsLabels;
     private List<JButton> buttons;
     private List<String> traitsNames;
-    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable;
+    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable, mouseOverColor, previousColor;
     Icon smallButtonIcon, smallButtonPushedIcon;
 
     public TraitsPanel(Controller controller, Font font, List<String> traitsNames, Map<String, Icon> iconsMap, Map<String, Color> colorsMap, boolean debug){
         this.font = font;
         setOpaque(false);
         transparentColor = colorsMap.get("Transparent");
+        previousColor = colorsMap.get("Transparent");
         greenColor = colorsMap.get("Green");
         takenColor = colorsMap.get("Taken");
         notAvailable = colorsMap.get("NotAvailable");
+        mouseOverColor = colorsMap.get("MouseOver");
         debug1Color = colorsMap.get("Debug1");
         debug2Color = colorsMap.get("Debug2");
         smallButtonIcon = iconsMap.get("smallButton");
@@ -92,13 +96,30 @@ public class TraitsPanel extends JPanel {
             button.setPressedIcon(smallButtonPushedIcon);
             button.setToolTipText("Take " + traitName + " trait");
             button.setBorder(null);
-            button.addActionListener(new ActionListener() {
+
+            MouseAdapter mouseAdapter = new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    controller.takeTraitButtonOnClick(traitName);
+                    previousColor = null;
+                    mouseLeaveTraitArea(traitName);
+                }
 
                 @Override
-                public void actionPerformed(ActionEvent e) {
-                    controller.takeTraitButtonOnClick(traitName);
+                public void mouseEntered(MouseEvent e) {
+                    super.mouseEntered(e);
+                    mouseEnterTraitArea(traitName);
                 }
-            });
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    super.mouseExited(e);
+                    mouseLeaveTraitArea(traitName);
+                }
+            };
+
+            button.addMouseListener(mouseAdapter);
+
             int onLeftSide = traitsNames.size()%2==0? traitsNames.size()/2 : traitsNames.size()/2+1;
             int n = i < onLeftSide? i : i - onLeftSide;
             int x = i < onLeftSide? 3 : 2;
@@ -113,6 +134,7 @@ public class TraitsPanel extends JPanel {
             };
             label.setForeground(greenColor);
             label.setFont(font);
+            label.addMouseListener(mouseAdapter);
             traitsLabels.add(label);
 
             if(i < onLeftSide){
@@ -142,6 +164,16 @@ public class TraitsPanel extends JPanel {
         return null;
     }
 
+    public JButton getJButtonByTraitName(String name) {
+        for(int i = 0; i < traitsNames.size(); i++){
+            if(traitsNames.get(i).equals(name)){
+                return buttons.get(i);
+            }
+        }
+
+        return null;
+    }
+
     public void setColors(boolean isCreated, List<String> takenTraits){
         Color color = !isCreated? greenColor : notAvailable;
         traitsLabels.forEach((label) -> label.setForeground(color));
@@ -155,5 +187,22 @@ public class TraitsPanel extends JPanel {
         traitsTipsMap.forEach((name, tip) -> {
             getJLabelByTraitName(name).setToolTipText(tip);
         });
+    }
+
+    public void mouseEnterTraitArea(String traitName) {
+        JLabel jLabel = getJLabelByTraitName(traitName);
+        JButton jButton = getJButtonByTraitName(traitName);
+        previousColor = jLabel.getForeground();
+        jLabel.setForeground(mouseOverColor);
+        jButton.setIcon(smallButtonPushedIcon);
+    }
+
+    public void mouseLeaveTraitArea(String traitName) {
+        JLabel jLabel = getJLabelByTraitName(traitName);
+        JButton jButton = getJButtonByTraitName(traitName);
+        if(previousColor != null){
+            jLabel.setForeground(previousColor);
+        }
+        jButton.setIcon(smallButtonIcon);
     }
 }

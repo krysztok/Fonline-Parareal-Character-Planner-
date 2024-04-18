@@ -105,6 +105,7 @@ public class Perks {
         SkillRequirement gunsSkills100Req = new SkillRequirement(gunsSkills, 100, true);
         SkillRequirement gunsSkills150Req = new SkillRequirement(gunsSkills, 150, true);
         SkillRequirement gunsSkills175Req = new SkillRequirement(gunsSkills, 175, true);
+        SkillRequirement gunsSkills200Req = new SkillRequirement(gunsSkills, 200, true);
         SkillRequirement normalGunsSkills100Req = new SkillRequirement(normalGunsSkills, 100, true);
         SkillRequirement distanceCombatSkills125Req = new SkillRequirement(distanceCombatSkills, 125, true);
         SkillRequirement distanceCombatSkills150Req = new SkillRequirement(distanceCombatSkills, 150, true);
@@ -209,7 +210,7 @@ public class Perks {
         Perk pyromaniac2 = new Perk("Pyromaniac(2)", pyromaniac2Reqs);
         Perk quickPockets = new Perk("Quick Pockets", level3Req, ag5Req);
         Perk quickRecovery = new Perk("Quick Recovery", level3Req, ag6Req);
-        Perk rightBetweenTheEyes = new Perk ("Right Between the Eyes", level15Req, critCombatSkills200Req);
+        Perk rightBetweenTheEyes = new Perk ("Right Between the Eyes", level15Req, gunsSkills200Req);
         Perk sharpshooter = new Perk("Sharpshooter", level9Req, distanceCombatSkills150Req);
         Perk silentDeath = new Perk("Silent Death", level15Req, sn175Req);
         Perk silentRunning = new Perk("Silent Running", level6Req, sn100Req);

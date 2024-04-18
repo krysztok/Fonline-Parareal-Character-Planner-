@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -18,13 +20,15 @@ public class DrugsPanel extends JPanel {
     private List<JLabel> drugsLabels;
     private List<JButton> buttons;
     private List<String> drugsNames;
-    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable;
+    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable, mouseOverColor, previousColor;
     Icon smallButtonIcon, smallButtonPushedIcon;
 
     public DrugsPanel(Controller controller, Font font, List<String> drugsNames, Map<String, Icon> iconsMap, Map<String, Color> colorsMap, boolean debug) {
         transparentColor = colorsMap.get("Transparent");
+        previousColor = colorsMap.get("Transparent");
         greenColor = colorsMap.get("Green");
         takenColor = colorsMap.get("Taken");
+        mouseOverColor = colorsMap.get("MouseOver");
         notAvailable = colorsMap.get("NotAvailable");
         debug1Color = colorsMap.get("Debug1");
         debug2Color = colorsMap.get("Debug2");
@@ -93,13 +97,30 @@ public class DrugsPanel extends JPanel {
             button.setPressedIcon(smallButtonPushedIcon);
             button.setToolTipText("Take " + drugName);
             button.setBorder(null);
-            button.addActionListener(new ActionListener() {
+
+            MouseAdapter mouseAdapter = new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    controller.takeDrugButtonOnClick(drugName);
+                    previousColor = null;
+                    mouseLeaveDrugArea(drugName);
+                }
 
                 @Override
-                public void actionPerformed(ActionEvent e) {
-                    controller.takeDrugButtonOnClick(drugName);
+                public void mouseEntered(MouseEvent e) {
+                    super.mouseEntered(e);
+                    mouseEnterDrugArea(drugName);
                 }
-            });
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    super.mouseExited(e);
+                    mouseLeaveDrugArea(drugName);
+                }
+            };
+
+            button.addMouseListener(mouseAdapter);
+
             int onLeftSide = drugsNames.size()%2==0? drugsNames.size()/2 : drugsNames.size()/2+1;
             int n = i < onLeftSide? i : i - onLeftSide;
             int x = i < onLeftSide? 3 : 2;
@@ -114,6 +135,7 @@ public class DrugsPanel extends JPanel {
             };
             label.setForeground(greenColor);
             label.setFont(font);
+            label.addMouseListener(mouseAdapter);
             drugsLabels.add(label);
 
             if(i < onLeftSide){
@@ -143,6 +165,16 @@ public class DrugsPanel extends JPanel {
         return null;
     }
 
+    public JButton getJButtonByDrugName(String name) {
+        for(int i = 0; i < drugsNames.size(); i++){
+            if(drugsNames.get(i).equals(name)){
+                return buttons.get(i);
+            }
+        }
+
+        return null;
+    }
+
     public void setColors(boolean isCreated, List<String> takenDrugs){
         Color color = isCreated? greenColor : notAvailable;
         drugsLabels.forEach((label) -> label.setForeground(color));
@@ -156,6 +188,23 @@ public class DrugsPanel extends JPanel {
         drugsTipsMap.forEach((name, tip) -> {
             getJLabelByDrugName(name).setToolTipText(tip);
         });
+    }
+
+    public void mouseEnterDrugArea(String drugName) {
+        JLabel jLabel = getJLabelByDrugName(drugName);
+        JButton jButton = getJButtonByDrugName(drugName);
+        previousColor = jLabel.getForeground();
+        jLabel.setForeground(mouseOverColor);
+        jButton.setIcon(smallButtonPushedIcon);
+    }
+
+    public void mouseLeaveDrugArea(String drugName) {
+        JLabel jLabel = getJLabelByDrugName(drugName);
+        JButton jButton = getJButtonByDrugName(drugName);
+        if(previousColor != null){
+            jLabel.setForeground(previousColor);
+        }
+        jButton.setIcon(smallButtonIcon);
     }
 }
 

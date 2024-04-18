@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -14,9 +16,9 @@ import java.util.Map;
 public class SkillsPanel extends JPanel {
 
     private JPanel tagPanel, labelsPanel, valuesPanel, skillPointsPanel, minusPanel, plusPanel, booksPanel, booksButtonsPanel, paddingPanel0, paddingPanel1, paddingPanel2;
-    private int width, height, xOffset, yOffset, skillsAmount;
+    private int width, height, xOffset, yOffset, skillsAmount, mouseOverIndex;
     Font font;
-    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor;
+    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, mouseOverColor, previousColor;
     private List<String> skillsNames;
     private List<JLabel> skillsLabels, valuesLabels, skillPointsLabels, booksAmountLabels;
     private List<JButton> tagButtons, minusSkillButtons, plusSkillButtons, plusBooksButtons;
@@ -26,8 +28,11 @@ public class SkillsPanel extends JPanel {
         this.font = font;
         setOpaque(false);
         transparentColor = colorsMap.get("Transparent");
+        previousColor = colorsMap.get("Transparent");
         greenColor = colorsMap.get("Green");
         takenColor = colorsMap.get("Taken");
+        mouseOverColor = colorsMap.get("MouseOver");
+        mouseOverIndex = -1;
         debug1Color = colorsMap.get("Debug1");
         debug2Color = colorsMap.get("Debug2");
         smallButtonIcon = iconsMap.get("smallButton");
@@ -141,8 +146,26 @@ public class SkillsPanel extends JPanel {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     controller.setTagSkillButtonOnClick(skillName);
+                    mouseLeaveSkillArea(skillName);
                 }
             });
+
+            MouseAdapter mouseAdapter = new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    super.mouseEntered(e);
+                    mouseEnterSkillArea(skillName);
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    super.mouseExited(e);
+                    mouseLeaveSkillArea(skillName);
+                }
+            };
+
+            tag.addMouseListener(mouseAdapter);
+
             tag.setBounds(1, 3 + i * 15,16, 10);
             tagButtons.add(tag);
             tagPanel.add(tag);
@@ -150,18 +173,21 @@ public class SkillsPanel extends JPanel {
             JLabel label = new JLabel(skillName);
             label.setForeground(greenColor);
             label.setFont(font);
+            label.addMouseListener(mouseAdapter);
             skillsLabels.add(label);
             labelsPanel.add(label);
 
             JLabel value = new JLabel("300");
             value.setForeground(greenColor);
             value.setFont(font);
+            value.addMouseListener(mouseAdapter);
             valuesLabels.add(value);
             valuesPanel.add(value);
 
             JLabel skillPoints = new JLabel("(+9999)");
             skillPoints.setForeground(greenColor);
             skillPoints.setFont(font);
+            skillPoints.addMouseListener(mouseAdapter);
             skillPointsLabels.add(skillPoints);
             skillPointsPanel.add(skillPoints);
 
@@ -181,6 +207,7 @@ public class SkillsPanel extends JPanel {
                     controller.minusSkillPointButtonOnClick(skillName);
                 }
             });
+            minus.addMouseListener(mouseAdapter);
             minus.setBounds(2, 1 + i * 15,16, 12);
             minusSkillButtons.add(minus);
             minusPanel.add(minus);
@@ -201,6 +228,7 @@ public class SkillsPanel extends JPanel {
                 }
             });
             plus.setPressedIcon(plusPushedIcon);
+            plus.addMouseListener(mouseAdapter);
             plus.setBounds(2, 1 + i * 15,16, 12);
             plusSkillButtons.add(plus);
             plusPanel.add(plus);
@@ -208,6 +236,7 @@ public class SkillsPanel extends JPanel {
             JLabel booksAmount = new JLabel("[10]");
             booksAmount.setForeground(greenColor);
             booksAmount.setFont(font);
+            booksAmount.addMouseListener(mouseAdapter);
             booksAmountLabels.add(booksAmount);
             booksPanel.add(booksAmount);
 
@@ -227,6 +256,7 @@ public class SkillsPanel extends JPanel {
                     controller.readBookButtonOnClick(skillName);
                 }
             });
+            plusBook.addMouseListener(mouseAdapter);
             plusBook.setBounds(2, 1 + i * 15,16, 12);
             plusBooksButtons.add(plusBook);
             booksButtonsPanel.add(plusBook);
@@ -284,5 +314,45 @@ public class SkillsPanel extends JPanel {
                 booksAmountLabels.get(index).setForeground(takenColor);
             }
         }
+
+        if(mouseOverIndex != -1){
+            previousColor = skillsLabels.get(mouseOverIndex).getForeground();
+            skillsLabels.get(mouseOverIndex).setForeground(mouseOverColor);
+            valuesLabels.get(mouseOverIndex).setForeground(mouseOverColor);
+            skillPointsLabels.get(mouseOverIndex).setForeground(mouseOverColor);
+            booksAmountLabels.get(mouseOverIndex).setForeground(mouseOverColor);
+        }
+
     }
+
+    public void mouseEnterSkillArea(String skillName) {
+        //int index = getSkillIndex(skillName);
+        mouseOverIndex = getSkillIndex(skillName);
+        previousColor = skillsLabels.get(mouseOverIndex).getForeground();
+
+        skillsLabels.get(mouseOverIndex).setForeground(mouseOverColor);
+        valuesLabels.get(mouseOverIndex).setForeground(mouseOverColor);
+        skillPointsLabels.get(mouseOverIndex).setForeground(mouseOverColor);
+        booksAmountLabels.get(mouseOverIndex).setForeground(mouseOverColor);
+
+        tagButtons.get(mouseOverIndex).setIcon(smallButtonPushedIcon);
+    }
+
+    public void mouseLeaveSkillArea(String skillName) {
+        //int index = getSkillIndex(skillName);
+
+        if(mouseOverIndex == -1){
+            return;
+        }
+
+        if(previousColor != null){
+            skillsLabels.get(mouseOverIndex).setForeground(previousColor);
+            valuesLabels.get(mouseOverIndex).setForeground(previousColor);
+            skillPointsLabels.get(mouseOverIndex).setForeground(previousColor);
+            booksAmountLabels.get(mouseOverIndex).setForeground(previousColor);
+        }
+        tagButtons.get(mouseOverIndex).setIcon(smallButtonIcon);
+        mouseOverIndex = -1;
+    }
+
 }

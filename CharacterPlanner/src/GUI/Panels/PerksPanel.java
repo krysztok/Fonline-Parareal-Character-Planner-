@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +16,7 @@ import java.util.Map;
 public class PerksPanel extends JPanel {
     private int width, height, xOffset, yOffset, perksMax;
     private Font font;
-    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable;
+    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable, notConfirmedColor, mouseOverColor, previousColor;
     private JPanel leftPanel, rightPanel, leftButtonsPanel, rightButtonsPanel, paddingPanel0, paddingPanel1;
     private List<JLabel> perksLabels;
     private List<JButton> buttons;
@@ -25,9 +27,11 @@ public class PerksPanel extends JPanel {
         this.font = font;
         setOpaque(false);
         transparentColor = colorsMap.get("Transparent");
+        previousColor = colorsMap.get("Transparent");
         greenColor = colorsMap.get("Green");
         takenColor = colorsMap.get("Taken");
         notAvailable = colorsMap.get("NotAvailable");
+        mouseOverColor = colorsMap.get("MouseOver");
         debug1Color = colorsMap.get("Debug1");
         debug2Color = colorsMap.get("Debug2");
         smallButtonIcon = iconsMap.get("smallButton");
@@ -92,13 +96,30 @@ public class PerksPanel extends JPanel {
             button.setPressedIcon(smallButtonPushedIcon);
             button.setToolTipText("Take " + perkName + " perk");
             button.setBorder(null);
-            button.addActionListener(new ActionListener() {
+
+            MouseAdapter mouseAdapter = new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    controller.takePerkButtonOnClick(perkName);
+                    previousColor = null;
+                    mouseLeavePerkArea(perkName);
+                }
 
                 @Override
-                public void actionPerformed(ActionEvent e) {
-                    controller.takePerkButtonOnClick(perkName);
+                public void mouseEntered(MouseEvent e) {
+                    super.mouseEntered(e);
+                    mouseEnterPerkArea(perkName);
                 }
-            });
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    super.mouseExited(e);
+                    mouseLeavePerkArea(perkName);
+                }
+            };
+
+            button.addMouseListener(mouseAdapter);
+
             int onLeftSide = perksNames.size()%2==0? perksNames.size()/2 : perksNames.size()/2+1;
             int n = i < onLeftSide? i : i - onLeftSide;
             int x = i < onLeftSide? 3 : 2;
@@ -113,6 +134,7 @@ public class PerksPanel extends JPanel {
             };
             label.setForeground(greenColor);
             label.setFont(font);
+            label.addMouseListener(mouseAdapter);
             perksLabels.add(label);
 
             if(i < onLeftSide){
@@ -143,6 +165,16 @@ public class PerksPanel extends JPanel {
         return null;
     }
 
+    public JButton getJButtonByPerkName(String name) {
+        for(int i = 0; i < perksNames.size(); i++){
+            if(perksNames.get(i).equals(name)){
+                return buttons.get(i);
+            }
+        }
+
+        return null;
+    }
+
     public void setColors(List<String> takenPerks, List<String> availablePerks, List<String> unavailablePerks){
         for(int i = 0; i < takenPerks.size(); i++){
             getJLabelByPerkName(takenPerks.get(i)).setForeground(takenColor);
@@ -162,4 +194,22 @@ public class PerksPanel extends JPanel {
             getJLabelByPerkName(name).setToolTipText(tip);
         });
     }
+
+    public void mouseEnterPerkArea(String perkName) {
+        JLabel jLabel = getJLabelByPerkName(perkName);
+        JButton jButton = getJButtonByPerkName(perkName);
+        previousColor = jLabel.getForeground();
+        jLabel.setForeground(mouseOverColor);
+        jButton.setIcon(smallButtonPushedIcon);
+    }
+
+    public void mouseLeavePerkArea(String perkName) {
+        JLabel jLabel = getJLabelByPerkName(perkName);
+        JButton jButton = getJButtonByPerkName(perkName);
+        if(previousColor != null){
+            jLabel.setForeground(previousColor);
+        }
+        jButton.setIcon(smallButtonIcon);
+    }
+
 }

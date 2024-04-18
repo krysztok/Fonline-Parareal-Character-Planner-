@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +17,7 @@ import java.util.Map;
 public class MasteriesPanel extends JPanel {
     private int width, height, xOffset, yOffset, masteriesMax;
     private Font font;
-    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable;
+    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable, mouseOverColor, previousColor;
     private JPanel leftPanel, rightPanel, leftButtonsPanel, rightButtonsPanel, paddingPanel0, paddingPanel1;
     private List<JLabel> masteriesLabels;
     private List<JButton> buttons;
@@ -26,8 +28,10 @@ public class MasteriesPanel extends JPanel {
         this.font = font;
         setOpaque(false);
         transparentColor = colorsMap.get("Transparent");
+        previousColor = colorsMap.get("Transparent");
         greenColor = colorsMap.get("Green");
         takenColor = colorsMap.get("Taken");
+        mouseOverColor = colorsMap.get("MouseOver");
         notAvailable = colorsMap.get("NotAvailable");
         debug1Color = colorsMap.get("Debug1");
         debug2Color = colorsMap.get("Debug2");
@@ -93,13 +97,30 @@ public class MasteriesPanel extends JPanel {
             button.setPressedIcon(smallButtonPushedIcon);
             button.setToolTipText("Take " + masteryName + " mastery");
             button.setBorder(null);
-            button.addActionListener(new ActionListener() {
+
+            MouseAdapter mouseAdapter = new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    controller.takeMasteryButtonOnClick(masteryName);
+                    previousColor = null;
+                    mouseLeaveMasteryArea(masteryName);
+                }
 
                 @Override
-                public void actionPerformed(ActionEvent e) {
-                    controller.takeMasteryButtonOnClick(masteryName);
+                public void mouseEntered(MouseEvent e) {
+                    super.mouseEntered(e);
+                    mouseEnterMasteryArea(masteryName);
                 }
-            });
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    super.mouseExited(e);
+                    mouseLeaveMasteryArea(masteryName);
+                }
+            };
+
+            button.addMouseListener(mouseAdapter);
+
             int onLeftSide = masteriesNames.size()%2==0? masteriesNames.size()/2 : masteriesNames.size()/2+1;
             int n = i < onLeftSide? i : i - onLeftSide;
             int x = i < onLeftSide? 3 : 2;
@@ -114,6 +135,7 @@ public class MasteriesPanel extends JPanel {
             };
             label.setForeground(greenColor);
             label.setFont(font);
+            label.addMouseListener(mouseAdapter);
             masteriesLabels.add(label);
 
             if(i < onLeftSide){
@@ -143,6 +165,16 @@ public class MasteriesPanel extends JPanel {
         return null;
     }
 
+    public JButton getJButtonByPerkName(String name) {
+        for(int i = 0; i < masteriesNames.size(); i++){
+            if(masteriesNames.get(i).equals(name)){
+                return buttons.get(i);
+            }
+        }
+
+        return null;
+    }
+
     public void setColors(List<String> takenMasteries, List<String> availableMasteries, List<String> unavailableMasteries){
         for(int i = 0; i < takenMasteries.size(); i++){
             getJLabelByPerkName(takenMasteries.get(i)).setForeground(takenColor);
@@ -161,5 +193,22 @@ public class MasteriesPanel extends JPanel {
         masteriesTipsMap.forEach((name, tip) -> {
             getJLabelByPerkName(name).setToolTipText(tip);
         });
+    }
+
+    public void mouseEnterMasteryArea(String masteryName) {
+        JLabel jLabel = getJLabelByPerkName(masteryName);
+        JButton jButton = getJButtonByPerkName(masteryName);
+        previousColor = jLabel.getForeground();
+        jLabel.setForeground(mouseOverColor);
+        jButton.setIcon(smallButtonPushedIcon);
+    }
+
+    public void mouseLeaveMasteryArea(String masteryName) {
+        JLabel jLabel = getJLabelByPerkName(masteryName);
+        JButton jButton = getJButtonByPerkName(masteryName);
+        if(previousColor != null){
+            jLabel.setForeground(previousColor);
+        }
+        jButton.setIcon(smallButtonIcon);
     }
 }

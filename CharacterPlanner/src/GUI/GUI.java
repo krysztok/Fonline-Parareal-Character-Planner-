@@ -39,7 +39,7 @@ public class GUI extends JPanel {
     Font font;
     ImageIcon[] numbers;
     ImageIcon[] negativeNumbers;
-    Color transparentColor, debug1Color, debug2Color, greenColor, redColor, notAvailableColor, takenColor;
+    Color transparentColor, debug1Color, debug2Color, greenColor, redColor, notAvailableColor, takenColor, notConfirmedColor, mouseOverColor;
     Map<String, Color> colorsMap;
     Icon bigButtonIcon, bigButtonPushedIcon, smallButtonIcon, smallButtonPushedIcon, minusIcon, minusPushedIcon,
             plusIcon, plusPushedIcon, plus1Icon, plus1PushedIcon, plus5Icon, plus5PushedIcon, allIcon, allPushedIcon;
@@ -66,6 +66,8 @@ public class GUI extends JPanel {
         //notAvailableColor = new Color(48,48,48,85);
         notAvailableColor = new Color(0,250,0,55);
         takenColor = new Color(171,171,171, 250);
+        notConfirmedColor = new Color(0, 183, 200, 255);
+        mouseOverColor = new Color(200, 143, 0, 255);
         colorsMap.put("Transparent", transparentColor);
         colorsMap.put("Debug1", debug1Color);
         colorsMap.put("Debug2", debug2Color);
@@ -73,6 +75,10 @@ public class GUI extends JPanel {
         colorsMap.put("Red", redColor);
         colorsMap.put("NotAvailable", notAvailableColor);
         colorsMap.put("Taken", takenColor);
+        colorsMap.put("NotConfirmed", notConfirmedColor);
+        colorsMap.put("MouseOver", mouseOverColor);
+
+        ToolTipManager.sharedInstance().setInitialDelay(100);
 
         InputStream iss = getClass().getResourceAsStream("/resources/fonts/font.ttf");
         font = Font.createFont(Font.TRUETYPE_FONT, iss);

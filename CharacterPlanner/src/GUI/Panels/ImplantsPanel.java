@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +17,7 @@ import java.util.Map;
 public class ImplantsPanel extends JPanel {
     private int width, height, xOffset, yOffset, implantsMax;
     private Font font;
-    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable;
+    Color transparentColor, debug1Color, debug2Color, greenColor, takenColor, notAvailable, mouseOverColor, previousColor;
     private JPanel leftPanel, rightPanel, leftButtonsPanel, rightButtonsPanel, paddingPanel0, paddingPanel1;
     private List<JLabel> implantsLabels;
     private List<JButton> buttons;
@@ -26,9 +28,11 @@ public class ImplantsPanel extends JPanel {
         this.font = font;
         setOpaque(false);
         transparentColor = colorsMap.get("Transparent");
+        previousColor = colorsMap.get("Transparent");
         greenColor = colorsMap.get("Green");
         takenColor = colorsMap.get("Taken");
         notAvailable = colorsMap.get("NotAvailable");
+        mouseOverColor = colorsMap.get("MouseOver");
         debug1Color = colorsMap.get("Debug1");
         debug2Color = colorsMap.get("Debug2");
         smallButtonIcon = iconsMap.get("smallButton");
@@ -93,13 +97,30 @@ public class ImplantsPanel extends JPanel {
             button.setPressedIcon(smallButtonPushedIcon);
             button.setToolTipText("Take " + implantName + " implant");
             button.setBorder(null);
-            button.addActionListener(new ActionListener() {
+
+            MouseAdapter mouseAdapter = new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    controller.takeImplantButtonOnClick(implantName);
+                    previousColor = null;
+                    mouseLeaveImplantArea(implantName);
+                }
 
                 @Override
-                public void actionPerformed(ActionEvent e) {
-                    controller.takeImplantButtonOnClick(implantName);
+                public void mouseEntered(MouseEvent e) {
+                    super.mouseEntered(e);
+                    mouseEnterImplantArea(implantName);
                 }
-            });
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    super.mouseExited(e);
+                    mouseLeaveImplantArea(implantName);
+                }
+            };
+
+            button.addMouseListener(mouseAdapter);
+
             int onLeftSide = implantsNames.size()%2==0? implantsNames.size()/2 : implantsNames.size()/2+1;
             int n = i < onLeftSide? i : i - onLeftSide;
             int x = i < onLeftSide? 3 : 2;
@@ -114,6 +135,7 @@ public class ImplantsPanel extends JPanel {
             };
             label.setForeground(greenColor);
             label.setFont(font);
+            label.addMouseListener(mouseAdapter);
             implantsLabels.add(label);
 
             if(i < onLeftSide){
@@ -143,6 +165,16 @@ public class ImplantsPanel extends JPanel {
         return null;
     }
 
+    public JButton getJButtonByPerkName(String name) {
+        for(int i = 0; i < implantsNames.size(); i++){
+            if(implantsNames.get(i).equals(name)){
+                return buttons.get(i);
+            }
+        }
+
+        return null;
+    }
+
     public void setColors(List<String> takenImplants, List<String> availableImplants, List<String> unavailableImplants){
         for(int i = 0; i < takenImplants.size(); i++){
             getJLabelByPerkName(takenImplants.get(i)).setForeground(takenColor);
@@ -161,5 +193,22 @@ public class ImplantsPanel extends JPanel {
         implantsTipsMap.forEach((name, tip) -> {
             getJLabelByPerkName(name).setToolTipText(tip);
         });
+    }
+
+    public void mouseEnterImplantArea(String implantName) {
+        JLabel jLabel = getJLabelByPerkName(implantName);
+        JButton jButton = getJButtonByPerkName(implantName);
+        previousColor = jLabel.getForeground();
+        jLabel.setForeground(mouseOverColor);
+        jButton.setIcon(smallButtonPushedIcon);
+    }
+
+    public void mouseLeaveImplantArea(String implantName) {
+        JLabel jLabel = getJLabelByPerkName(implantName);
+        JButton jButton = getJButtonByPerkName(implantName);
+        if(previousColor != null){
+            jLabel.setForeground(previousColor);
+        }
+        jButton.setIcon(smallButtonIcon);
     }
 }
