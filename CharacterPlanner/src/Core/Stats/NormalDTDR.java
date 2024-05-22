@@ -13,6 +13,7 @@ public class NormalDTDR extends Stat {
     private int nightkin;
     private int tank;
     private int sweetScience;
+    private int heart;
 
     public NormalDTDR(String name) {
         super(name);
@@ -26,6 +27,7 @@ public class NormalDTDR extends Stat {
         nightkin = 0;
         tank = 0;
         sweetScience = 0;
+        heart = 0;
     }
 
     @Override
@@ -34,6 +36,7 @@ public class NormalDTDR extends Stat {
         evenTougher = character.getPerks().getPerkByName("Even Tougher").isTaken()? 1 : 0;
         jet = character.getDrugs().getDrugByName("Jet").isTaken()? 1 : 0;
         psycho = character.getDrugs().getDrugByName("Psycho").isTaken()? 1 : 0;
+        heart = character.getDrugs().getDrugByName("Heart").isTaken()? 1 : 0;
 
         dermals = 0;
         if(character.getImplants().getImplantByName("Dermal Impact Armor").isTaken()){
@@ -53,7 +56,7 @@ public class NormalDTDR extends Stat {
 
         int valueDT = 2 * toughness + 3 * evenTougher + dermalDt + 3 * mutant + 3 * nightkin + 2 * tank;
         int valueDR = 5 * toughness + 10 * evenTougher - 15 * jet + 15 * psycho + 4 * dermals - 5 * bloodymess + 10 * mutant
-                + 5 * nightkin + 5 * tank + 10 * sweetScience;
+                + 5 * nightkin + 5 * tank + 10 * sweetScience + 15 * heart;
         setValue(valueDT);
         setSecondValueValue(valueDR);
     }

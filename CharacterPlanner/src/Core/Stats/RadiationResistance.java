@@ -8,6 +8,7 @@ public class RadiationResistance extends Stat {
     private int bruiser;
     private int liverBox;
     private int radX;
+    private int liver;
 
     public RadiationResistance(String name) {
         super(name);
@@ -16,6 +17,7 @@ public class RadiationResistance extends Stat {
         bruiser = 0;
         liverBox = 0;
         radX = 0;
+        liver = 0;
     }
 
     @Override
@@ -26,8 +28,9 @@ public class RadiationResistance extends Stat {
         snakeater = character.getSupportPerks().getPerkByName("Snakeater").isTaken()? 1 : 0;
         liverBox = character.getImplants().getImplantByName("Liver Box").isTaken()? 1 : 0;
         radX = character.getDrugs().getDrugByName("Rad-X").isTaken()? 1 : 0;
+        liver = character.getDrugs().getDrugByName("Liver").isTaken()? 1 : 0;
 
-        int finalValue = 2 * enImpsAndPerks + 20 * snakeater + 10 * radResistance - 10 * bruiser + 15 * liverBox + 20 * radX;
+        int finalValue = 2 * enImpsAndPerks + 20 * snakeater + 10 * radResistance - 10 * bruiser + 15 * liverBox + 20 * radX + 20 * liver;
 
         /*cap*/
         if (finalValue > 95 ){

@@ -80,3 +80,8 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 -added cap to movement speed (40)<br>
 -takable elements change color when mouse is over them + can be taken by clicking on name (not only by button)<br>
 -tips(e.g. perk descriptions) now show faster <br>
+
+**22.05.2024**<br>
+-removed note that sniper mastery works only for two handed weapons <br>
+-changed pyromaniac perk description <br>
+-added cannibal support perk and drugs <br>

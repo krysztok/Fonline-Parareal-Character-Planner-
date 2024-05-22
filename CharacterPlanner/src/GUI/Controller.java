@@ -65,7 +65,7 @@ public class Controller {
         gui.setSupportPerksColors(character.getTakenSupportPerksNames(), character.getAvailableSupportPerksNames(), character.getUnAvailableSupportPerksNames());
         gui.setImplantsColors(character.getTakenImplantsNames(), character.getAvailableImplantsNames(), character.getUnAvailableImplantsNames());
         gui.setMasteriesColors(character.getTakenMasteriesNames(), character.getAvailableMasteriesNames(), character.getUnAvailableMasteriesNames());
-        gui.setDrugsColors(character.getCreated(), character.getTakenDrugsNames());
+        gui.setDrugsColors(character.getCreated(), character.getTakenDrugsNames(), character.getAvailableDrugsNames(), character.getUnAvailableDrugsNames());
         gui.setTraitsColors(character.getCreated(), character.getTakenTraitsNames());
         gui.setSkillsColors(character.getTaggedSkills());
 

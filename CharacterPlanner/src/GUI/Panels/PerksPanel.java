@@ -36,15 +36,16 @@ public class PerksPanel extends JPanel {
         debug2Color = colorsMap.get("Debug2");
         smallButtonIcon = iconsMap.get("smallButton");
         smallButtonPushedIcon = iconsMap.get("smallButtonPushed");
+        perksMax = 56;
         width = 368;
-        height = 432;
+        height = 16 * perksMax/2;
         xOffset = 355;
         yOffset = 362;
         setBounds(xOffset, yOffset, width, height);
         setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
         setBackground(transparentColor);
 
-        perksMax = 54;
+
         this.perksNames = perksNames;
         perksLabels = new ArrayList<JLabel>();
         buttons = new ArrayList<JButton>();

@@ -25,10 +25,7 @@ public class PlasmaDTDR extends Stat {
         }
 
         bloodymess = character.getTraits().getTraitByName("Bloody Mess").isTaken()? 1 : 0;
-
-        if(character.getPerks().getPerkByName("Way of the Fruit").isTaken()){
-            wayOfTheFruit = character.getDrugs().getDrugByName("Fruit").isTaken()? 1 : 0;
-        }
+        wayOfTheFruit = character.getDrugs().getDrugByName("Fruit").isTaken()? 1 : 0;
 
         int phoenixDt = phoenix == 2 ? 1 : 0;
 

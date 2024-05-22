@@ -12,7 +12,6 @@ public class HealingRate extends Stat {
     private int cookie;
     private int bruiser;
     private int mutie;
-    private int nightkin;
 
     public HealingRate(String name) {
         super(name);
@@ -25,7 +24,6 @@ public class HealingRate extends Stat {
         roentgen = 0;
         bruiser = 0;
         mutie = 0;
-        nightkin = 0;
     }
 
     @Override
@@ -41,13 +39,8 @@ public class HealingRate extends Stat {
         cookie = character.getDrugs().getDrugByName("Cookie").isTaken()? 1 : 0;
         bruiser = character.getTraits().getTraitByName("Bruiser").isTaken()? 1 : 0;
         mutie = character.getDrugs().getDrugByName("Mutie").isTaken()? 1 : 0;
-        nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
 
-        int finalValue = base + 20 * fasterHealing + 30 * livingAnatomy + 10 * adrenalEnhancement + 10 * mutant + 20 * wonderlandHr + 20 * roentgen + 20 * cookie - 10 * bruiser;
-
-        if(mutant == 1 || nightkin == 1){
-            finalValue -= 20 * mutie;
-        }
+        int finalValue = base + 20 * fasterHealing + 30 * livingAnatomy + 10 * adrenalEnhancement + 10 * mutant + 20 * wonderlandHr + 20 * roentgen + 20 * cookie - 10 * bruiser - 20 * mutie;
 
         finalValue = finalValue<0? 0 : finalValue;
         setValue(finalValue);

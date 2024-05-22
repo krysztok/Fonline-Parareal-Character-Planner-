@@ -111,6 +111,7 @@ public class Character {
             requirementList.addAll(supportPerks.getRequirements());
             requirementList.addAll(implants.getRequirements());
             requirementList.addAll(masteries.getRequirements());
+            requirementList.addAll(drugs.getRequirements());
 
             requirementList.forEach((requirement) -> {
                 requirement.unChecked();
@@ -127,6 +128,7 @@ public class Character {
     }
 
     public void calculate() {
+        drugs.validateDrugs(this);
         getSpecials().calculateSpecialValues(this);
         getSkills().calculateSkillsValues(this);
         getStats().calculateStats(this);
@@ -250,6 +252,14 @@ public class Character {
         return drugs.getTakenDrugsNames();
     }
 
+    public List<String> getAvailableDrugsNames() {
+        return drugs.getAvailableDrugsNames(isCreated);
+    }
+
+    public List<String> getUnAvailableDrugsNames() {
+        return drugs.getUnAvailableDrugsNames(isCreated);
+    }
+
     public List<String> getTakenTraitsNames() {
         return traits.getTakenTraitsNames();
     }
@@ -352,4 +362,6 @@ public class Character {
     public void setCheatsOn(Boolean cheatsOn) {
         this.cheatsOn = cheatsOn;
     }
+
+
 }

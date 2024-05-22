@@ -9,6 +9,7 @@ public class ActionPoints extends Stat {
     private int jet;
     private int nuka;
     private int cookie;
+    private int ear;
 
     public ActionPoints(String name) {
         super(name);
@@ -18,6 +19,7 @@ public class ActionPoints extends Stat {
         jet = 0;
         nuka = 0;
         cookie = 0;
+        ear = 0;
     }
 
     @Override
@@ -37,8 +39,9 @@ public class ActionPoints extends Stat {
         jet =  character.getDrugs().getDrugByName("Jet").isTaken()? 1 : 0;
         nuka =  character.getDrugs().getDrugByName("Nuka-Cola").isTaken()? 1 : 0;
         cookie =  character.getDrugs().getDrugByName("Cookie").isTaken()? 1 : 0;
+        ear =  character.getDrugs().getDrugByName("Ear").isTaken()? 1 : 0;
 
-        int finalValue = 5 + (int)(agDrugs/2) + actionBoys + 2 * jet - bruiser + kamikaze + nuka + cookie;
+        int finalValue = 5 + (int)(agDrugs/2) + actionBoys + 2 * jet - bruiser + kamikaze + nuka + cookie + 2 * ear;
         setValue(finalValue);
     }
 

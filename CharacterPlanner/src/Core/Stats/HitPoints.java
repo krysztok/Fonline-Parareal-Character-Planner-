@@ -20,6 +20,7 @@ public class HitPoints extends Stat {
     private Boolean isOdd;
     private int brutishHulk;
     private int bruiser;
+    private int heart;
 
     public HitPoints(String name) {
         super(name);
@@ -40,6 +41,7 @@ public class HitPoints extends Stat {
         isOdd = false;
         brutishHulk = 0;
         bruiser = 0;
+        heart = 0;
     }
 
     @Override
@@ -100,11 +102,12 @@ public class HitPoints extends Stat {
         rotgut = character.getDrugs().getDrugByName("Rot Gut").isTaken()? 1 : 0;
         cookie = character.getDrugs().getDrugByName("Cookie").isTaken()? 1 : 0;
         bakedFish = character.getDrugs().getDrugByName("Baked Fish").isTaken()? 1 : 0;
+        heart = character.getDrugs().getDrugByName("Heart").isTaken()? 1 : 0;
 
 
         int finalValue = base + hpFromLevels + hpFromTraits + 20 * nemeans + 50 * noiception + 40 * lifegivers + 100 * mutant +
                 50 * nightkin + 20 * tank + 15 * buffout + 15 * bakedFish - 10 * rotgut + 10 * cookie + 10 * wonderlandHp +
-                5 * smittysMeal + 2 * enduranceImp;
+                5 * smittysMeal + 2 * enduranceImp + 15 * heart;
 
         setValue(finalValue);
     }

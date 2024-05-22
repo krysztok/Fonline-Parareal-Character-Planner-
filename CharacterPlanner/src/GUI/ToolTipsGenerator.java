@@ -45,51 +45,55 @@ public class ToolTipsGenerator {
         traitsTipsMap.put("Loner", "<html>Loner <br> (+) +10% to any experience points gained <br> <font color=\"red\">(-) Can't have followers </font></html>");
         traitsTipsMap.put("One Hander", "<html>One Hander <br> (+) +20% to chance to hit when using Single-handed weapons <br> (+) +10% Overall Damage with Single-Handed weapons <br> <font color=\"red\">(-) -100 hit chance penalty when using Two-handed weapons </font></html>");
         traitsTipsMap.put("Small Frame", "<html>Small Frame <br> (+) +1 to Agility <br> (+) +5 to Movement Speed <br> <font color=\"red\">(-) significantly reduced Carry Weight capacity <br> (-) using Weapons requiring a Strength of eight or more will injure you! </font></html>");
-
-        drugsTipsMap.put("Beer", "<html>Beer <br> (+) +1 Endurance <br>(+) +1 Charisma <br> <font color=\"red\">(-) -2 Perception </font></html>");
-        drugsTipsMap.put("Buffout", "<html>Buffout <br> (+) +2 Strength <br> (+) +1 Endurance <br> (+) +15 Max Hit Points <br><font color=\"red\">(-) -1 Agility </font></html>");
-        drugsTipsMap.put("Cigarettes", "<html>Cigarettes <br> (+) +1 Perception <br><font color=\"red\">(-) -1 Charisma </font></html>");
-        drugsTipsMap.put("Jet", "<html>Jet <br> (+) +2 Action Points <br><font color=\"red\">(-) -15% Normal DR <br>(-) -1 Charisma <br>(-) -2 Strength</font></html>");
-        drugsTipsMap.put("Mentats", "<html>Mentats <br> (+) +2 Intelligence <br> (+) +2 Perception <br><font color=\"red\"> (-) -2 Endurance</font></html>");
-        drugsTipsMap.put("Nuka-Cola", "<html>Nuka-Cola <br> (+) +1 Action Point<br><font color=\"red\"> (-) -1 Endurance</font></html>");
-        drugsTipsMap.put("Psycho", "<html>Psycho <br> (+) +15% Normal DR<br> (+) +1 Strength <br> (+) +1 Endurance <br><font color=\"red\"> (-) -2 Perception</font></html>");
-        drugsTipsMap.put("Rad-X", "<html>Rad-X <br> (+) +20% Rad Resistance</html>");
-        drugsTipsMap.put("Booze", "<html>Booze <br> (+) +2 Luck<br> (+) +1 Charisma <br> <font color=\"red\"> (-) -1 Endurance <br> (-) -1 Perception</font></html>");
-        drugsTipsMap.put("Gamma Gulp Beer", "<html>Gamma Gulp Beer <br> (+) +2 Agility<br> (+) +1 Charisma <br> <font color=\"red\"> (-) -3 Endurance </font></html>");
-        drugsTipsMap.put("Roentgen Rum", "<html>Roentgen Rum <br> (+) +20 Healing Rate<br> (+) +1 Charisma <br> <font color=\"red\"> (-) -1 Strength <br> (-) -2 Perception </font></html>");
-        drugsTipsMap.put("Rot Gut", "<html>Rot Gut <br> (+) +10 Fire DR<br><font color=\"red\"> (-) -1 Perception <br> (-) -10 Max Hit Points </font></html>");
-        drugsTipsMap.put("Cookie", "<html>Cookie <br> (+) +1 Action Point <br> (+) +10 Max Hit Points<br> (+) +20 Healing Rate</html>");
-        drugsTipsMap.put("Baked Fish", "<html>Baked Fish <br> (+) +15 Max Hit Points</html>");
    }
 
     public void generateChangingTips(Character character) {
        /*********DRUGS*********/
-       String fruit = "<html>Fruit <br> (+) +10 Plasma DR <br> (+) +10 Laser DR <br> (+) +2 Perception <br> Requirements: <br>";
+        drugsTipsMap.put("Beer", "<html>Beer <br> (+) +1 Endurance <br>(+) +1 Charisma <br> <font color=\"red\">(-) -2 Perception </font><br> Requirements: <br>");
+        drugsTipsMap.put("Buffout", "<html>Buffout <br> (+) +2 Strength <br> (+) +1 Endurance <br> (+) +15 Max Hit Points <br><font color=\"red\">(-) -1 Agility </font><br> Requirements: <br>");
+        drugsTipsMap.put("Cigarettes", "<html>Cigarettes <br> (+) +1 Perception <br><font color=\"red\">(-) -1 Charisma </font><br> Requirements: <br>");
+        drugsTipsMap.put("Jet", "<html>Jet <br> (+) +2 Action Points <br><font color=\"red\">(-) -15% Normal DR <br>(-) -1 Charisma <br>(-) -2 Strength</font><br> Requirements: <br>");
+        drugsTipsMap.put("Mentats", "<html>Mentats <br> (+) +2 Intelligence <br> (+) +2 Perception <br><font color=\"red\"> (-) -2 Endurance</font><br> Requirements: <br>");
+        drugsTipsMap.put("Nuka-Cola", "<html>Nuka-Cola <br> (+) +1 Action Point<br><font color=\"red\"> (-) -1 Endurance</font><br> Requirements: <br>");
+        drugsTipsMap.put("Psycho", "<html>Psycho <br> (+) +15% Normal DR<br> (+) +1 Strength <br> (+) +1 Endurance <br><font color=\"red\"> (-) -2 Perception</font><br> Requirements: <br>");
+        drugsTipsMap.put("Rad-X", "<html>Rad-X <br> (+) +20% Rad Resistance<br> Requirements: <br>");
+        drugsTipsMap.put("Booze", "<html>Booze <br> (+) +2 Luck<br> (+) +1 Charisma <br> <font color=\"red\"> (-) -1 Endurance <br> (-) -1 Perception</font><br> Requirements: <br>");
+        drugsTipsMap.put("Gamma Gulp Beer", "<html>Gamma Gulp Beer <br> (+) +2 Agility<br> (+) +1 Charisma <br> <font color=\"red\"> (-) -3 Endurance </font><br> Requirements: <br>");
+        drugsTipsMap.put("Roentgen Rum", "<html>Roentgen Rum <br> (+) +20 Healing Rate<br> (+) +1 Charisma <br> <font color=\"red\"> (-) -1 Strength <br> (-) -2 Perception </font><br> Requirements: <br>");
+        drugsTipsMap.put("Rot Gut", "<html>Rot Gut <br> (+) +10 Fire DR<br><font color=\"red\"> (-) -1 Perception <br> (-) -10 Max Hit Points </font><br> Requirements: <br>");
+        drugsTipsMap.put("Cookie", "<html>Cookie <br> (+) +1 Action Point <br> (+) +10 Max Hit Points<br> (+) +20 Healing Rate<br> Requirements: <br>");
+        drugsTipsMap.put("Baked Fish", "<html>Baked Fish <br> (+) +15 Max Hit Points<br> Requirements: <br>");
+        drugsTipsMap.put("Fruit", "<html>Fruit <br> (+) +10 Plasma DR <br> (+) +10 Laser DR <br> (+) +2 Perception <br> Requirements: <br>");
+        drugsTipsMap.put("Mutie", "<html>Mutie <br> (+) +3 Agility <br> <font color=\"red\"> (-) -2 Perception <br> (-) -20 Healing Rate</font> <br> Requirements: <br>");
 
 
-       boolean hasWayOfTheFruit = character.getPerks().getPerkByName("Way of the Fruit").isTaken();
-       if(!hasWayOfTheFruit){
-           fruit += "<font color=\"red\">";
-       }
-       fruit += "Way of the Fruit perk";
-       if(!hasWayOfTheFruit){
-           fruit += "</font>";
-       }
-       fruit += "</html>";
-       drugsTipsMap.put("Fruit", fruit);
+        drugsTipsMap.put("Heart", "<html>Heart <br> (+) +15% Normal DR <br> (+) +4 Endurance <br> (+) +15 Max Hit Points<br> <font color=\"red\"> (-) -25 Hit Points on out </font><br> Requirements: <br>");
+        drugsTipsMap.put("Liver", "<html>Liver <br> (+) +20% Rad Resistance <br> (+) -25 Radiation <br> (+) +2 Strength<br> <font color=\"red\"> (-) -25 Hit Points on out </font><br> Requirements: <br>");
+        drugsTipsMap.put("Brain", "<html>Brain <br> (+) +3 Intelligence <br> <font color=\"red\"> (-) -25 Hit Points on out </font><br>  Requirements: <br>");
+        drugsTipsMap.put("Ear", "<html>Ear <br> (+) +2 Action Point <br> (+) +2 Luck <br> <font color=\"red\"> (-) -25 Hit Points on out </font><br>  Requirements: <br>");
+        drugsTipsMap.put("Eye", "<html>Eye <br> (+) +3 Perception <br> <font color=\"red\"> (-) -25 Hit Points on out </font><br>  Requirements: <br>");
 
-       String mutie = "<html>Mutie <br> (+) +3 Agility <br> <font color=\"red\"> (-) -2 Perception <br> (-) -20 Healing Rate</font> <br> Requirements: <br>";
-       boolean hasMutant = character.getMasteries().getMasteryByName("Mutant").isTaken() || character.getMasteries().getMasteryByName("Nightkin").isTaken();
-       if(!hasMutant){
-           mutie += "<font color=\"red\">";
-       }
-       mutie += "Mutant or Nightkin mastery";
-       if(!hasMutant){
-           mutie += "</font>";
-       }
-       mutie += "</html>";
+        drugsTipsMap.forEach((name, text) -> {
+            String reqs = "";
+            List<Requirement> requirementList =  character.getDrugs().getDrugByName(name).getRequirements();
 
-       drugsTipsMap.put("Mutie", mutie);
+            for(int i = 0; i < requirementList.size(); i++){
+                if(!requirementList.get(i).isAvailable){
+                    reqs += "<font color=\"red\">";
+                }
+
+                reqs += requirementList.get(i).getInfo();
+                if(!requirementList.get(i).isAvailable){
+                    reqs += "</font>";
+                }
+
+                reqs += "<br>";
+
+            }
+
+            reqs += "</html>";
+            drugsTipsMap.put(name,text + reqs);
+        });
 
        /*********Perks*********/
         perksTipsMap.put("Action Boy(1)", "<html>Action Boy(1) <br> (+) +1 Action Point <br> (+) +5 Movement Speed<br> Requirements: <br>");
@@ -133,8 +137,10 @@ public class ToolTipsGenerator {
         perksTipsMap.put("Medic", "<html>Medic<br> (+) Healing First Aid and Doctor cooldowns reduced by 50% <br> (+) Guarantee bonus of random +20-55 HP on every use of First Aid <br> (+) allows removal of KO on others with doctor skill<br> Requirements: <br>");
         perksTipsMap.put("More Critical", "<html>More Critical<br> (+) +5% Critical Chance<br> Requirements: <br>");
         perksTipsMap.put("More Ranged Damage", "<html>More Ranged Damage<br> (+) +4 to a weapon's damage range when using small or big guns<br> Requirements: <br>");
-        perksTipsMap.put("Pyromaniac(1)", "<html>Pyromaniac(1)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +1-2 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
-        perksTipsMap.put("Pyromaniac(2)", "<html>Pyromaniac(2)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +1-2 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
+        //perksTipsMap.put("Pyromaniac(1)", "<html>Pyromaniac(1)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +1-2 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
+        perksTipsMap.put("Pyromaniac(1)", "<html>Pyromaniac(1)<br> (+) +20 flat damage when using fire-based weaponry<br><font color=\"orange\">NOTE: Works also with “12 ga. Gecko's Breath Shotgun Shells”</font><br> (+) +1-2 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
+        //perksTipsMap.put("Pyromaniac(2)", "<html>Pyromaniac(2)<br> (+) +50% damage when using Solar Scorcher<br>(+) +20% damage when using Flamers<br>(+) +3% damage when using Gecko Breath Shotgun Shells<br>(+) +1-2 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
+        perksTipsMap.put("Pyromaniac(2)", "<html>Pyromaniac(2)<br> (+) +20 flat damage when using fire-based weaponry<br><font color=\"orange\">NOTE: Works also with “12 ga. Gecko's Breath Shotgun Shells”</font><br> (+) +1-2 flat damage when using Molotovs and Fire Grenades<br> Requirements: <br>");
         perksTipsMap.put("Quick Pockets", "<html>Quick Pockets<br> (+) (Un)equipping/picking up items is done at half its normal AP cost <br> (+) Reloading cost reduced to 1 AP <br> Requirements: <br>");
         perksTipsMap.put("Quick Recovery", "<html>Quick Recovery<br> (+) Recovering from knock downs/knock outs costs significantly fewer APs than it normally would<br> Requirements: <br>");
         perksTipsMap.put("Right Between the Eyes", "<html>Right Between the Eyes<br> (+) -50% to your target's helmet's critical modifiers<br> Requirements: <br>");
@@ -173,7 +179,7 @@ public class ToolTipsGenerator {
         /*********Masteries*********/
         masteriesTipsMap.put("Tank", "<html>Tank <br> (+) +20 max Hit Points <br> (+) +5 Normal DR <br> (+) +2 Normal DT<br> Requirements: <br>");
         masteriesTipsMap.put("Sweet Science", "<html>Sweet Science <br> (+) +10 Melee Damage <br> (+) +10 Normal DR <br> (+) +5% to melee critical power rolls <br> Requirements: <br>");
-        masteriesTipsMap.put("Sniper", "<html>Sniper<br> (+) Changes the critical chance calculation to a random roll of 1-13 against attacker's luck for eye/head shots and 1-20 for other parts.<br> (+) adds the players Intelligence x 1 to the critical power roll<br><font color=\"orange\">NOTE: Works only for aimed shots from two handed weapons</font><br> Requirements: <br>");
+        masteriesTipsMap.put("Sniper", "<html>Sniper<br> (+) Changes the critical chance calculation to a random roll of 1-13 against attacker's luck for eye/head shots and 1-20 for other parts.<br> (+) adds the players Intelligence x 1 to the critical power roll<br><font color=\"orange\">NOTE: Works only for aimed shots</font><br> Requirements: <br>");
         masteriesTipsMap.put("Rambo", "<html>Rambo<br> (+) +2 damage to each bullet <br> (+) +5% Critical Chance <br> (+) +5% final dmg<br> Requirements: <br>");
         masteriesTipsMap.put("Nightkin", "<html>Nightkin<br> (+) +50 max Hit Points <br> (+) +5 Normal DR <br> (+) +3 Normal DT <br> (+) while in sneak, all successful rear attacks have Silent Death effect <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
         masteriesTipsMap.put("Mutant", "<html>Mutant<br> (+) +100 max Hit Points <br> (+) +10 Healing rate <br> (+) +10 Normal DR <br> (+) +3 Normal DT <br> (+) radiation immunity <br> (+) you can wear Mutants Armors<br> Requirements: <br>");
@@ -253,6 +259,7 @@ public class ToolTipsGenerator {
         supportsTipsMap.put("Boneyard Guard ew", "<html>Boneyard Guard ew <br> (+) +10% Energy Weapons skill<br> Requirements: <br>");
         supportsTipsMap.put("Boneyard Guard cc", "<html>Boneyard Guard cc <br> (+) +10% Close Combat skill<br> Requirements: <br>");
         supportsTipsMap.put("Boneyard Guard th", "<html>Boneyard Guard th <br> (+) +10% Throwing skill<br> Requirements: <br>");
+        supportsTipsMap.put("Cannibal", "<html>Cannibal<br> (+) Ability to consume special drugs for Cannibals. <br> <font color=\"red\">(-) You can't experience the effects of regular drugs <br> (-) When using regular healing drugs, you regain only half the normal number of current hit points</font><br><font color=\"orange\">NOTE: You can still consume alcohol and regular food, but when you consume food you will suffer a dose of poisoning<br> NOTE: Reward for \"Kill Canibal for Arrow\" quest</font> <br> Requirements: <br>");
         supportsTipsMap.put("Cautious Nature", "<html>Cautious Nature<br> (+) +3 to Perception when determining placement in random encounters<br> Requirements: <br>");
         supportsTipsMap.put("Dead Man Walking", "<html>Dead Man Walking<br> (+) Doubled negative HP capacity<br> Requirements: <br>");
         supportsTipsMap.put("Demolition Expert", "<html>Demolition Expert<br> (+) No unwanted explosions and extra damage for the wanted ones<br> Requirements: <br>");

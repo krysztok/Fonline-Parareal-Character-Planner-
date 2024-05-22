@@ -36,7 +36,7 @@ public class DrugsPanel extends JPanel {
         smallButtonPushedIcon = iconsMap.get("smallButtonPushed");
         setOpaque(false);
         this.font = font;
-        drugsMax = 16;
+        drugsMax = 22;
         this.drugsNames = drugsNames;
         transparentColor = new Color(0,0,0,0);
         width = 314;
@@ -175,12 +175,17 @@ public class DrugsPanel extends JPanel {
         return null;
     }
 
-    public void setColors(boolean isCreated, List<String> takenDrugs){
-        Color color = isCreated? greenColor : notAvailable;
-        drugsLabels.forEach((label) -> label.setForeground(color));
-
+    public void setColors(boolean isCreated, List<String> takenDrugs, List<String> availableDrugs, List<String> unavailableDrugs){
         for(int i = 0; i < takenDrugs.size(); i++){
             getJLabelByDrugName(takenDrugs.get(i)).setForeground(takenColor);
+        }
+
+        for(int i = 0; i < availableDrugs.size(); i++){
+            getJLabelByDrugName(availableDrugs.get(i)).setForeground(greenColor);
+        }
+
+        for(int i = 0; i < unavailableDrugs.size(); i++){
+            getJLabelByDrugName(unavailableDrugs.get(i)).setForeground(notAvailable);
         }
     }
 

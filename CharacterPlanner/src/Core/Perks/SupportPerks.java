@@ -25,6 +25,7 @@ public class SupportPerks {
         SpecialRequirement in5Req = new SpecialRequirement( "Intelligence", 5, true);
         SpecialRequirement in6Req = new SpecialRequirement( "Intelligence", 6, true);
         SpecialRequirement in8Req = new SpecialRequirement( "Intelligence", 8, true);
+        SpecialRequirement ch2orLessReq = new SpecialRequirement( "Charisma", 2, false);
 
         /* SPECIAL drugged Requirements*/
         SpecialDruggedRequirement ch6ReqDrugs = new SpecialDruggedRequirement( "Charisma", 6, true);
@@ -161,6 +162,7 @@ public class SupportPerks {
         Perk boneyardGuardEw = new Perk(boneyardGuardEwName, boneyardGuardReqs);
         Perk boneyardGuardMelee = new Perk(boneyardGuardMeleeName, boneyardGuardReqs);
         Perk boneyardGuardTh = new Perk(boneyardGuardThName, boneyardGuardReqs);
+        Perk cannibal = new Perk("Cannibal", ch2orLessReq);
         Perk cautiousNature = new Perk("Cautious Nature", cautiousNatureReqs);
         Perk deadManWalking = new Perk("Dead Man Walking", deadManWalkingReqs);
         Perk demolitionExpert = new Perk("Demolition Expert", tr125Req);
@@ -206,6 +208,7 @@ public class SupportPerks {
         perksMap.put(boneyardGuardEw.getName(), boneyardGuardEw);
         perksMap.put(boneyardGuardMelee.getName(), boneyardGuardMelee);
         perksMap.put(boneyardGuardTh.getName(), boneyardGuardTh);
+        perksMap.put(cannibal.getName(), cannibal);
         perksMap.put(cautiousNature.getName(), cautiousNature);
         perksMap.put(deadManWalking.getName(), deadManWalking);
         perksMap.put(demolitionExpert.getName(), demolitionExpert);

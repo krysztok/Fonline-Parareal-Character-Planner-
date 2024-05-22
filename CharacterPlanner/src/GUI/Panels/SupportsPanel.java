@@ -39,7 +39,7 @@ public class SupportsPanel extends JPanel {
         debug2Color = colorsMap.get("Debug2");
         smallButtonIcon = iconsMap.get("smallButton");
         smallButtonPushedIcon = iconsMap.get("smallButtonPushed");
-        perksMax = 54;
+        perksMax = 56;
         this.perksNames = new ArrayList<>(perksNames);
         width = 368;
         height = 16 * perksMax/2;

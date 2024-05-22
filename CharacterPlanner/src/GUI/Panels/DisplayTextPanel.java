@@ -23,7 +23,7 @@ public class DisplayTextPanel extends JPanel {
         width = 254;
         height = 32;
         xOffset = 50;
-        yOffset = 700;
+        yOffset = 748;
         setBounds(xOffset, yOffset, width, height);
         setLayout(new  GridLayout(2,1));
         setBackground(debug? debug1Color:transparentColor);
