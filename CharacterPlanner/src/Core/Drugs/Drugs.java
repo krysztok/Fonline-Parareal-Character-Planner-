@@ -29,7 +29,7 @@ public class Drugs {
         mutieReqs.add(noCannibal);
 
         Drug bakedFish = new Drug("Baked Fish");
-        Drug beer = new Drug("Beer");
+        Drug beer = new Drug("Beer", noCannibal);
         Drug booze = new Drug("Booze");
         Drug buffout = new Drug("Buffout", noCannibal);
         Drug cigarettes = new Drug("Cigarettes", noCannibal);
@@ -39,7 +39,7 @@ public class Drugs {
         Drug jet = new Drug("Jet", noCannibal);
         Drug mentats = new Drug("Mentats", noCannibal);
         Drug mutie = new Drug("Mutie", mutieReqs);
-        Drug nukaCola = new Drug("Nuka-Cola");
+        Drug nukaCola = new Drug("Nuka-Cola", noCannibal);
         Drug psycho = new Drug("Psycho", noCannibal);
         Drug radX = new Drug("Rad-X", noCannibal);
         Drug roentgenRum = new Drug("Roentgen Rum");

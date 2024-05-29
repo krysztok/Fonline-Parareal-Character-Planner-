@@ -85,3 +85,6 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 -removed note that sniper mastery works only for two handed weapons <br>
 -changed pyromaniac perk description <br>
 -added cannibal support perk and drugs <br>
+
+**29.05.2024**<br>
+-fixed non-cannibal drugs requirements <br>
