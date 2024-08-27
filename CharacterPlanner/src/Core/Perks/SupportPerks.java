@@ -72,6 +72,7 @@ public class SupportPerks {
         SkillRequirement out150Req = new SkillRequirement(out, 150, true);
         SkillRequirement rp100Req = new SkillRequirement(rp, 100, true);
         SkillRequirement rp120Req = new SkillRequirement(rp, 120, true);
+        SkillRequirement rp125Req = new SkillRequirement(rp, 125, true);
         SkillRequirement sn100Req = new SkillRequirement(sn, 100, true);
         SkillRequirement sp75Req = new SkillRequirement(sp, 75, true);
         SkillRequirement sp100Req = new SkillRequirement(sp, 100, true);
@@ -96,7 +97,7 @@ public class SupportPerks {
         boneyardGuardPerks.add(boneyardGuardMeleeName);
         boneyardGuardPerks.add(boneyardGuardThName);
 
-        PerkRequirement boneyardGuardPerksReq = new PerkRequirement(boneyardGuardPerks, false);
+        PerkRequirement boneyardGuardPerksReq = new PerkRequirement(boneyardGuardPerks, false, true);
 
         String wonderlandCcName = "Surviving in the wild";
         String wonderlandHpName = "The art of the hunt";
@@ -107,7 +108,16 @@ public class SupportPerks {
         wonderlandPerks.add(wonderlandHpName);
         wonderlandPerks.add(wonderlandHrName);
 
-        PerkRequirement wonderlandPerksReq = new PerkRequirement(wonderlandPerks, false);
+        PerkRequirement wonderlandPerksReq = new PerkRequirement(wonderlandPerks, false, true);
+
+        String mutantName = "Mutant";
+        String nightkinName = "Nightkin";
+
+        List<String> speciesPerks = new ArrayList<>();
+        speciesPerks.add(mutantName);
+        speciesPerks.add(nightkinName);
+
+        PerkRequirement speciesPerksReq = new PerkRequirement(speciesPerks, false, true);
 
         /* Requirements Lists*/
         List<Requirement> harmlessReqs = new ArrayList<>();
@@ -178,7 +188,9 @@ public class SupportPerks {
         Perk magneticPersonality = new Perk("Magnetic Personality", sp100Req);
         Perk masterThief = new Perk("Master Thief", st125Req);
         Perk monsterSkinning = new Perk("Monster Skinning", out50Req);
-        Perk mrFixit = new Perk("Mr. Fixit", rp120Req);
+        Perk mrFixit = new Perk("Mr. Fixit", rp125Req);
+        Perk mutant = new Perk("Mutant", speciesPerksReq);
+        Perk nightkin = new Perk("Nightkin", speciesPerksReq);
         Perk negotiator = new Perk("Negotiator", br125Req);
         Perk nerdRage = new Perk("Nerd Rage", nerdRageReqs);
         Perk packRat = new Perk("Pack Rat", level6Req);
@@ -225,6 +237,8 @@ public class SupportPerks {
         perksMap.put(masterThief.getName(), masterThief);
         perksMap.put(monsterSkinning.getName(), monsterSkinning);
         perksMap.put(mrFixit.getName(), mrFixit);
+        perksMap.put(mutant.getName(), mutant);
+        perksMap.put(nightkin.getName(), nightkin);
         perksMap.put(negotiator.getName(), negotiator);
         perksMap.put(nerdRage.getName(), nerdRage);
         perksMap.put(packRat.getName(), packRat);

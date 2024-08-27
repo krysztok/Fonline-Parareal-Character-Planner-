@@ -16,10 +16,15 @@ public class Drugs {
         /* REQUIREMENTS */
         PerkRequirement wayOfTheFruitReq = new PerkRequirement("Way of the Fruit", true);
 
-        List<String> mutantMasteries = new ArrayList<>();
+        /*List<String> mutantMasteries = new ArrayList<>();
         mutantMasteries.add("Mutant");
         mutantMasteries.add("Nightkin");
-        MasteryRequirement mutantReq = new MasteryRequirement(mutantMasteries, true);
+        MasteryRequirement mutantReq = new MasteryRequirement(mutantMasteries, true);*/
+
+        List<String> mutantSpecies = new ArrayList<>();
+        mutantSpecies.add("Mutant");
+        mutantSpecies.add("Nightkin");
+        PerkRequirement mutantReq = new PerkRequirement(mutantSpecies, true, false);
 
         PerkRequirement hasCannibal = new PerkRequirement("Cannibal", true);
         PerkRequirement noCannibal = new PerkRequirement("Cannibal", false);

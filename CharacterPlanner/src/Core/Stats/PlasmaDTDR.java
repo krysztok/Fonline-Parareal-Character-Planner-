@@ -6,12 +6,14 @@ public class PlasmaDTDR extends Stat {
     private int phoenix;
     private int bloodymess;
     private int wayOfTheFruit;
+    private int tank;
 
     public PlasmaDTDR(String name) {
         super(name);
         phoenix = 0;
         bloodymess = 0;
         wayOfTheFruit = 0;
+        tank = 0;
     }
 
     @Override
@@ -26,11 +28,12 @@ public class PlasmaDTDR extends Stat {
 
         bloodymess = character.getTraits().getTraitByName("Bloody Mess").isTaken()? 1 : 0;
         wayOfTheFruit = character.getDrugs().getDrugByName("Fruit").isTaken()? 1 : 0;
+        tank = character.getMasteries().getMasteryByName("Tank").isTaken()? 1 : 0;
 
         int phoenixDt = phoenix == 2 ? 1 : 0;
 
-        int valueDR = 4 * phoenix - 5 * bloodymess + 10 * wayOfTheFruit;
-        int valueDT = phoenixDt;
+        int valueDR = 4 * phoenix - 5 * bloodymess + 10 * wayOfTheFruit + 5 * tank;
+        int valueDT = phoenixDt + 2 * tank;
         setValue(valueDT);
         setSecondValueValue(valueDR);
     }

@@ -17,8 +17,8 @@ public class Masteries {
 
         LevelRequirement levelReq = new LevelRequirement(30, true);
 
-        Mastery mutant = new Mastery("Mutant", levelReq);
-        Mastery nightkin = new Mastery("Nightkin", levelReq);
+        //Mastery mutant = new Mastery("Mutant", levelReq);
+        //Mastery nightkin = new Mastery("Nightkin", levelReq);
         Mastery rambo = new Mastery("Rambo", levelReq);
         Mastery sniper = new Mastery("Sniper", levelReq);
         Mastery sweetScience = new Mastery("Sweet Science", levelReq);
@@ -26,8 +26,8 @@ public class Masteries {
         Mastery dragoon = new Mastery("Dragoon", levelReq);
 
         masteriesMap.put(dragoon.getName(), dragoon);
-        masteriesMap.put(mutant.getName(), mutant);
-        masteriesMap.put(nightkin.getName(), nightkin);
+        //masteriesMap.put(mutant.getName(), mutant);
+        //masteriesMap.put(nightkin.getName(), nightkin);
         masteriesMap.put(rambo.getName(), rambo);
         masteriesMap.put(sniper.getName(), sniper);
         masteriesMap.put(sweetScience.getName(), sweetScience);

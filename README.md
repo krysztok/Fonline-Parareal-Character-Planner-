@@ -88,3 +88,28 @@ Changed Gifted trait the way it works now (+1 to all SPECIALs, -5 SP/Level)<br>
 
 **29.05.2024**<br>
 -fixed non-cannibal drugs requirements <br>
+
+**27.08.2024**<br>
+Test season 4 update <br>
+-added close combat requirement to Better Criticals perk<br>
+-removed HtH Criticals perk<br>
+-removed Blessed Are the Weak perk<br>
+-merged Bonus HtH Damage and More HtH Criticals perks (Close Combat Master perk)<br>
+-merged Bonus Rate of Fire and Bonus HtH Attacks perks (Bonus Rate of Attack perk)<br>
+-removed second level of Bonus Ranged Damage perk<br>
+-changed effects and requirements of Dodger perks<br>
+-added close combat requirement to Even More Criticals perk<br>
+-added Field Medic perk<br>
+-removed HtH Evade perks<br>
+-changed Hit the Gaps perk requirements<br>
+-added Iron Limbs perk<br>
+-removed Living Anatomy perk<br>
+-changed Medic perk requirements<br>
+-changed effect and requirements of Pyromaniac perk <br>
+-removed Right Between the Eyes perk<br>
+-changed effect and requirements of Sharpshooter perk <br>
+-changed effect and requirements of Mr. Fixit support perk <br>
+-changed effects on Right Knee and Left Hand implants<br>
+-moved Mutant and Nightkin masteries to support perks (for now, later maybe new panel with species only)<br>
+-added note to Sniper mastery<br>
+-changed Tank mastery effect<br>

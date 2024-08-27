@@ -47,8 +47,10 @@ public class NormalDTDR extends Stat {
         }
 
         bloodymess = character.getTraits().getTraitByName("Bloody Mess").isTaken()? 1 : 0;
-        mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
-        nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
+        //mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
+        //nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
+        mutant = character.getSupportPerks().getPerkByName("Mutant").isTaken()? 1 : 0;
+        nightkin = character.getSupportPerks().getPerkByName("Nightkin").isTaken()? 1 : 0;
         tank = character.getMasteries().getMasteryByName("Tank").isTaken()? 1 : 0;
         sweetScience = character.getMasteries().getMasteryByName("Sweet Science").isTaken()? 1 : 0;
 

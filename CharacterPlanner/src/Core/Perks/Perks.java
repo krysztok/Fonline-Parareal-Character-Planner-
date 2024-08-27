@@ -34,6 +34,7 @@ public class Perks {
         SpecialRequirement st6Req = new SpecialRequirement( "Strength", 6, true);
         SpecialRequirement st9orLessReq = new SpecialRequirement( "Strength", 9, false);
         SpecialRequirement pe5Req = new SpecialRequirement( "Perception", 5, true);
+        SpecialRequirement pe6Req = new SpecialRequirement( "Perception", 6, true);
         SpecialRequirement pe9orLessReq = new SpecialRequirement( "Perception", 9, false);
         SpecialRequirement en4Req = new SpecialRequirement( "Endurance", 4, true);
         SpecialRequirement en5Req = new SpecialRequirement( "Endurance", 5, true);
@@ -44,6 +45,7 @@ public class Perks {
         SpecialRequirement ch6Req = new SpecialRequirement( "Charisma", 6, true);
         SpecialRequirement ch9orLessReq = new SpecialRequirement( "Charisma", 9, false);
         SpecialRequirement in9orLessReq = new SpecialRequirement( "Intelligence", 9, false);
+        SpecialRequirement in3Req = new SpecialRequirement( "Intelligence", 3, true);
         SpecialRequirement ag5Req = new SpecialRequirement( "Agility", 5, true);
         SpecialRequirement ag6Req = new SpecialRequirement( "Agility", 6, true);
         SpecialRequirement ag8Req = new SpecialRequirement( "Agility", 8, true);
@@ -58,6 +60,7 @@ public class Perks {
         String cc = "Close Combat";
         String th = "Throwing";
         String fa = "First Aid";
+        String doc = "Doctor";
         String sn = "Sneak";
 
         List<String> combatSkills = new ArrayList<>();
@@ -75,6 +78,15 @@ public class Perks {
         List<String> normalGunsSkills = new ArrayList<>();
         normalGunsSkills.add(sg);
         normalGunsSkills.add(bg);
+
+        List<String> pyroSkills = new ArrayList<>();
+        pyroSkills.add(sg);
+        pyroSkills.add(bg);
+        pyroSkills.add(th);
+
+        List<String> meleeSkills = new ArrayList<>();
+        meleeSkills.add(cc);
+        meleeSkills.add(th);
 
         List<String> distanceCombatSkills = new ArrayList<>();
         distanceCombatSkills.add(sg);
@@ -96,6 +108,8 @@ public class Perks {
         SkillRequirement fa125Req = new SkillRequirement(fa, 125, true);
         SkillRequirement fa150Req = new SkillRequirement(fa, 150, true);
         SkillRequirement fa175Req = new SkillRequirement(fa, 175, true);
+        SkillRequirement doc175Req = new SkillRequirement(doc, 175, true);
+        SkillRequirement doc125Req = new SkillRequirement(doc, 125, true);
         SkillRequirement sn100Req = new SkillRequirement(sn, 100, true);
         SkillRequirement sn150Req = new SkillRequirement(sn, 150, true);
         SkillRequirement sn175Req = new SkillRequirement(sn, 175, true);
@@ -118,6 +132,8 @@ public class Perks {
         SkillRequirement combatSkills180Req = new SkillRequirement(combatSkills, 180, true);
         SkillRequirement critCombatSkills150Req = new SkillRequirement(critCombatSkills, 150, true);
         SkillRequirement critCombatSkills200Req = new SkillRequirement(critCombatSkills, 200, true);
+        SkillRequirement meleeSkills150Req = new SkillRequirement(meleeSkills, 150, true);
+        SkillRequirement pyroSkills100Req = new SkillRequirement(pyroSkills, 100, true);
 
         /* Perks Requirements*/
         PerkRequirement actionBoyReq = new PerkRequirement("Action Boy(1)", true);
@@ -125,7 +141,8 @@ public class Perks {
         PerkRequirement dodgerReq = new PerkRequirement("Dodger(1)", true);
         PerkRequirement lg1Req = new PerkRequirement("Lifegiver(1)", true);
         PerkRequirement lg2Req = new PerkRequirement("Lifegiver(2)", true);
-        PerkRequirement pyroReq = new PerkRequirement("Pyromaniac(1)", true);
+        //PerkRequirement pyroReq = new PerkRequirement("Pyromaniac(1)", true);
+        PerkRequirement medicReq = new PerkRequirement("Medic", true);
 
         /* Requirements Lists*/
         List<Requirement> actionBoy2Reqs = new ArrayList<>();
@@ -138,7 +155,7 @@ public class Perks {
         bonusRangedDamage2Reqs.add(gunsSkills175Req);
         bonusRangedDamage2Reqs.add(brdReq);
 
-       /* List<Requirement> dodger1Reqs = new ArrayList<>();
+        List<Requirement> dodger1Reqs = new ArrayList<>();
         dodger1Reqs.add(level15Req);
         dodger1Reqs.add(ag8Req);
         dodger1Reqs.add(cc150Req);
@@ -146,8 +163,20 @@ public class Perks {
         List<Requirement> dodger2Reqs = new ArrayList<>();
         dodger2Reqs.add(level18Req);
         dodger2Reqs.add(ag10Req);
-        dodger2Reqs.add(cc150Req);
-        dodger2Reqs.add(dodgerReq);*/
+        dodger2Reqs.add(cc175Req);
+        dodger2Reqs.add(dodgerReq);
+
+        List<Requirement> medicReqs = new ArrayList<>();
+        medicReqs.add(level9Req);
+        medicReqs.add(doc125Req);
+        medicReqs.add(fa125Req);
+        medicReqs.add(in3Req);
+
+        List<Requirement> fieldMedicReqs = new ArrayList<>();
+        fieldMedicReqs.add(level15Req);
+        fieldMedicReqs.add(doc175Req);
+        fieldMedicReqs.add(fa175Req);
+        fieldMedicReqs.add(medicReq);
 
         List<Requirement> lifegiver2Reqs = new ArrayList<>();
         lifegiver2Reqs.add(level15Req);
@@ -159,30 +188,44 @@ public class Perks {
         lifegiver3Reqs.add(en7Req);
         lifegiver3Reqs.add(lg2Req);
 
-        List<Requirement> pyromaniac2Reqs = new ArrayList<>();
+       /* List<Requirement> pyromaniac2Reqs = new ArrayList<>();
         pyromaniac2Reqs.add(level15Req);
         pyromaniac2Reqs.add(gunsSkills150Req);
-        pyromaniac2Reqs.add(pyroReq);
+        pyromaniac2Reqs.add(pyroReq);*/
+
+        List<Requirement> ironLimbsReqs = new ArrayList<>();
+        ironLimbsReqs.add(level15Req);
+        ironLimbsReqs.add(st6Req);
+        ironLimbsReqs.add(en6Req);
+
+        List<Requirement> sharpshooterReqs = new ArrayList<>();
+        sharpshooterReqs.add(level9Req);
+        sharpshooterReqs.add(distanceCombatSkills150Req);
+        sharpshooterReqs.add(pe6Req);
+
 
         /* PERKS */
         Perk actionBoy1 = new Perk("Action Boy(1)", level12Req, ag6Req);
         Perk actionBoy2 = new Perk("Action Boy(2)", actionBoy2Reqs);
         Perk adrenalineRush = new Perk("Adrenaline Rush", level3Req, st5Req);
-        Perk betterCriticals = new Perk("Better Criticals", level12Req, distanceCombatSkills175Req);
-        Perk blessedAreTheWeak = new Perk("Blessed Are the Weak", level9Req, fa125Req);
+        Perk betterCriticals = new Perk("Better Criticals", level12Req, combatSkills175Req);
+        //Perk blessedAreTheWeak = new Perk("Blessed Are the Weak", level9Req, fa125Req);
         Perk bonusMove = new Perk("Bonus Move", level3Req, ag6Req);
-        Perk bonusRangedDamage1 = new Perk("Bonus Ranged Damage(1)", level9Req, gunsSkills150Req);
-        Perk bonusRangedDamage2 = new Perk("Bonus Ranged Damage(2)", bonusRangedDamage2Reqs);
-        Perk bonusRateOfFire = new Perk("Bonus Rate of Fire", level18Req, distanceCombatSkills180Req);
-        Perk bonusHtHAttacks = new Perk("Bonus HtH Attacks", level18Req, cc180Req);
-        //Perk closeCombatMaster = new Perk("Close Combat Master", level9Req, cc150Req);
-        Perk bonusHthDamage1 = new Perk("Bonus HtH Damage", level3Req, cc75Req);
-        Perk bonusHthDamage2 = new Perk("Bonus HtH Damage+", level6Req, cc100Req);
-        Perk htHCriticals = new Perk("HtH Criticals", level15Req, cc175Req);
-        Perk dodger1 = new Perk("Dodger", level12Req, ag8Req);
-        Perk dodger2 = new Perk("Dodger+", level15Req, ag10Req);
+        Perk bonusRangedDamage = new Perk("Bonus Ranged Damage", level9Req, distanceCombatSkills150Req);
+        //Perk bonusRangedDamage1 = new Perk("Bonus Ranged Damage(1)", level9Req, gunsSkills150Req);
+        //Perk bonusRangedDamage2 = new Perk("Bonus Ranged Damage(2)", bonusRangedDamage2Reqs);
+        Perk bonusRateOfAttack = new Perk("Bonus Rate of Attack", level18Req, combatSkills180Req);
+        //Perk bonusRateOfFire = new Perk("Bonus Rate of Fire", level18Req, distanceCombatSkills180Req);
+        //Perk bonusHtHAttacks = new Perk("Bonus HtH Attacks", level18Req, cc180Req);
+        Perk closeCombatMaster = new Perk("Close Combat Master", level9Req, cc150Req);
+        //Perk bonusHthDamage1 = new Perk("Bonus HtH Damage", level3Req, cc75Req);
+        //Perk bonusHthDamage2 = new Perk("Bonus HtH Damage+", level6Req, cc100Req);
+        //Perk htHCriticals = new Perk("HtH Criticals", level15Req, cc175Req);
+        Perk dodger1 = new Perk("Dodger(1)", dodger1Reqs);
+        Perk dodger2 = new Perk("Dodger(2)", dodger2Reqs);
         Perk earlierSequence = new Perk("Earlier Sequence", level3Req, pe5Req);
-        Perk evenMoreCriticals = new Perk("Even More Criticals", level6Req, distanceCombatSkills125Req);
+        Perk evenMoreCriticals = new Perk("Even More Criticals", level6Req, combatSkills125Req);
+        Perk fieldMedic = new Perk("Field Medic", fieldMedicReqs);
         Perk gainAgility = new Perk("Gain Agility", level12Req, ag9orLessReq);
         Perk gainCharisma = new Perk("Gain Charisma", level12Req, ch9orLessReq);
         Perk gainEndurance = new Perk("Gain Endurance", level12Req, en9orLessReq);
@@ -193,25 +236,27 @@ public class Perks {
         Perk ghost = new Perk("Ghost", level12Req, sn150Req);
         Perk heaveHo1 = new Perk("Heave Ho!", level6Req, th100Req);
         Perk heaveHo2 = new Perk("Heave Ho!!", level9Req, th150Req);
-        Perk hitTheGaps = new Perk("Hit the Gaps", level12Req, critCombatSkills150Req);
-        Perk hthEvade = new Perk("HtH Evade", level6Req, cc75Req);
-        Perk hthEvade2 = new Perk("HtH Evade+", level9Req, cc150Req);
+        Perk hitTheGaps = new Perk("Hit the Gaps", level12Req, meleeSkills150Req);
+        //Perk hthEvade = new Perk("HtH Evade", level6Req, cc75Req);
+        //Perk hthEvade2 = new Perk("HtH Evade+", level9Req, cc150Req);
         Perk inYourFace = new Perk("In Your Face!", level6Req, combatSkills125Req);
+        Perk ironLimbs = new Perk("Iron Limbs", ironLimbsReqs);
         Perk lifegiver1 = new Perk("Lifegiver(1)", level12Req, en5Req);
         Perk lifegiver2 = new Perk("Lifegiver(2)", lifegiver2Reqs);
         Perk lifegiver3 = new Perk("Lifegiver(3)", lifegiver3Reqs);
         Perk lifewire = new Perk("Livewire", level3Req, ag6Req);
-        Perk livingAnatomy = new Perk("Living Anatomy", level12Req, fa150Req);
+        //Perk livingAnatomy = new Perk("Living Anatomy", level12Req, fa150Req);
         Perk manOfSteel = new Perk("Man of Steel", level15Req, en8Req);
-        Perk medic = new Perk("Medic", level15Req, fa175Req);
+        Perk medic = new Perk("Medic", medicReqs);
         Perk moreCritical = new Perk("More Critical", level3Req, combatSkills100Req);
         Perk moreRangedDamage = new Perk("More Ranged Damage", level15Req, distanceCombatSkills200Req);
-        Perk pyromaniac1 = new Perk("Pyromaniac(1)", level9Req, gunsSkills100Req);
-        Perk pyromaniac2 = new Perk("Pyromaniac(2)", pyromaniac2Reqs);
+        Perk pyromaniac = new Perk("Pyromaniac", level9Req, pyroSkills100Req);
+        //Perk pyromaniac1 = new Perk("Pyromaniac(1)", level9Req, gunsSkills100Req);
+        //Perk pyromaniac2 = new Perk("Pyromaniac(2)", pyromaniac2Reqs);
         Perk quickPockets = new Perk("Quick Pockets", level3Req, ag5Req);
         Perk quickRecovery = new Perk("Quick Recovery", level3Req, ag6Req);
-        Perk rightBetweenTheEyes = new Perk ("Right Between the Eyes", level15Req, gunsSkills200Req);
-        Perk sharpshooter = new Perk("Sharpshooter", level9Req, distanceCombatSkills150Req);
+        //Perk rightBetweenTheEyes = new Perk ("Right Between the Eyes", level15Req, gunsSkills200Req);
+        Perk sharpshooter = new Perk("Sharpshooter", sharpshooterReqs);
         Perk silentDeath = new Perk("Silent Death", level15Req, sn175Req);
         Perk silentRunning = new Perk("Silent Running", level6Req, sn100Req);
         Perk sprayAndPray = new Perk("Spray and Pray", level9Req, distanceCombatSkills125Req);
@@ -225,19 +270,22 @@ public class Perks {
         perksMap.put(actionBoy2.getName(), actionBoy2);
         perksMap.put(adrenalineRush.getName(), adrenalineRush);
         perksMap.put(betterCriticals.getName(), betterCriticals);
-        perksMap.put(blessedAreTheWeak.getName(), blessedAreTheWeak);
-        perksMap.put(bonusHtHAttacks.getName(), bonusHtHAttacks);
-        perksMap.put(bonusHthDamage1.getName(), bonusHthDamage1);
-        perksMap.put(bonusHthDamage2.getName(), bonusHthDamage2);
+        //perksMap.put(blessedAreTheWeak.getName(), blessedAreTheWeak);
+        //perksMap.put(bonusHtHAttacks.getName(), bonusHtHAttacks);
+        //perksMap.put(bonusHthDamage1.getName(), bonusHthDamage1);
+        //perksMap.put(bonusHthDamage2.getName(), bonusHthDamage2);
         perksMap.put(bonusMove.getName(), bonusMove);
-        perksMap.put(bonusRangedDamage1.getName(), bonusRangedDamage1);
-        perksMap.put(bonusRangedDamage2.getName(), bonusRangedDamage2);
-        perksMap.put(bonusRateOfFire.getName(), bonusRateOfFire);
-        //perksMap.put(closeCombatMaster.getName(), closeCombatMaster);
+        perksMap.put(bonusRangedDamage.getName(), bonusRangedDamage);
+        //perksMap.put(bonusRangedDamage1.getName(), bonusRangedDamage1);
+        //perksMap.put(bonusRangedDamage2.getName(), bonusRangedDamage2);
+        //perksMap.put(bonusRateOfFire.getName(), bonusRateOfFire);
+        perksMap.put(bonusRateOfAttack.getName(), bonusRateOfAttack);
+        perksMap.put(closeCombatMaster.getName(), closeCombatMaster);
         perksMap.put(dodger1.getName(), dodger1);
         perksMap.put(dodger2.getName(), dodger2);
         perksMap.put(earlierSequence.getName(), earlierSequence);
         perksMap.put(evenMoreCriticals.getName(), evenMoreCriticals);
+        perksMap.put(fieldMedic.getName(), fieldMedic);
         perksMap.put(gainAgility.getName(), gainAgility);
         perksMap.put(gainCharisma.getName(), gainCharisma);
         perksMap.put(gainEndurance.getName(), gainEndurance);
@@ -249,24 +297,26 @@ public class Perks {
         perksMap.put(heaveHo1.getName(), heaveHo1);
         perksMap.put(heaveHo2.getName(), heaveHo2);
         perksMap.put(hitTheGaps.getName(), hitTheGaps);
-        perksMap.put(htHCriticals.getName(), htHCriticals);
-        perksMap.put(hthEvade.getName(), hthEvade);
-        perksMap.put(hthEvade2.getName(), hthEvade2);
+        //perksMap.put(htHCriticals.getName(), htHCriticals);
+        //perksMap.put(hthEvade.getName(), hthEvade);
+        //perksMap.put(hthEvade2.getName(), hthEvade2);
         perksMap.put(inYourFace.getName(), inYourFace);
+        perksMap.put(ironLimbs.getName(), ironLimbs);
         perksMap.put(lifegiver1.getName(), lifegiver1);
         perksMap.put(lifegiver2.getName(), lifegiver2);
         perksMap.put(lifegiver3.getName(), lifegiver3);
         perksMap.put(lifewire.getName(), lifewire);
-        perksMap.put(livingAnatomy.getName(), livingAnatomy);
+        //perksMap.put(livingAnatomy.getName(), livingAnatomy);
         perksMap.put(manOfSteel.getName(), manOfSteel);
         perksMap.put(medic.getName(), medic);
         perksMap.put(moreCritical.getName(), moreCritical);
         perksMap.put(moreRangedDamage.getName(), moreRangedDamage);
-        perksMap.put(pyromaniac1.getName(), pyromaniac1);
-        perksMap.put(pyromaniac2.getName(), pyromaniac2);
+        perksMap.put(pyromaniac.getName(), pyromaniac);
+        //perksMap.put(pyromaniac1.getName(), pyromaniac1);
+        //perksMap.put(pyromaniac2.getName(), pyromaniac2);
         perksMap.put(quickPockets.getName(), quickPockets);
         perksMap.put(quickRecovery.getName(), quickRecovery);
-        perksMap.put(rightBetweenTheEyes.getName(), rightBetweenTheEyes);
+        //perksMap.put(rightBetweenTheEyes.getName(), rightBetweenTheEyes);
         perksMap.put(sharpshooter.getName(), sharpshooter);
         perksMap.put(silentDeath.getName(), silentDeath);
         perksMap.put(silentRunning.getName(), silentRunning);

@@ -94,8 +94,10 @@ public class HitPoints extends Stat {
         wonderlandHp = character.getSupportPerks().getPerkByName("Surviving in the wild").isTaken()? 1 : 0;
         smittysMeal = character.getSupportPerks().getPerkByName("Smitty's Meal").isTaken()? 1 : 0;
 
-        mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
-        nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
+        //mutant = character.getMasteries().getMasteryByName("Mutant").isTaken()? 1 : 0;
+        //nightkin = character.getMasteries().getMasteryByName("Nightkin").isTaken()? 1 : 0;
+        mutant = character.getSupportPerks().getPerkByName("Mutant").isTaken()? 1 : 0;
+        nightkin = character.getSupportPerks().getPerkByName("Nightkin").isTaken()? 1 : 0;
         tank = character.getMasteries().getMasteryByName("Tank").isTaken()? 1 : 0;
 
         buffout = character.getDrugs().getDrugByName("Buffout").isTaken()? 1 : 0;
