@@ -65,6 +65,7 @@ public class ToolTipsGenerator {
         drugsTipsMap.put("Baked Fish", "<html>Baked Fish <br> (+) +15 Max Hit Points<br> Requirements: <br>");
         drugsTipsMap.put("Fruit", "<html>Fruit <br> (+) +10 Plasma DR <br> (+) +10 Laser DR <br> (+) +2 Perception <br> Requirements: <br>");
         drugsTipsMap.put("Mutie", "<html>Mutie <br> (+) +3 Agility <br> <font color=\"red\"> (-) -2 Perception <br> (-) -20 Healing Rate</font> <br> Requirements: <br>");
+        drugsTipsMap.put("Bubblegum", "<html>Bubblegum <br> (+) +5 Movement Speed <br> <font color=\"red\"> (-) +5 Radiation levels </font> <br> Requirements: <br>");
 
 
         drugsTipsMap.put("Heart", "<html>Heart <br> (+) +15% Normal DR <br> (+) +4 Endurance <br> (+) +15 Max Hit Points<br> <font color=\"red\"> (-) -25 Hit Points on out </font><br> Requirements: <br>");

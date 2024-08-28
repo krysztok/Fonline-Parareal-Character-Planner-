@@ -36,6 +36,7 @@ public class Drugs {
         Drug bakedFish = new Drug("Baked Fish");
         Drug beer = new Drug("Beer", noCannibal);
         Drug booze = new Drug("Booze");
+        Drug bubblegum = new Drug("Bubblegum");
         Drug buffout = new Drug("Buffout", noCannibal);
         Drug cigarettes = new Drug("Cigarettes", noCannibal);
         Drug cookie = new Drug("Cookie");
@@ -60,6 +61,7 @@ public class Drugs {
         drugsMap.put(beer.getName(), beer);
         drugsMap.put(booze.getName(), booze);
         drugsMap.put(brain.getName(), brain);
+        drugsMap.put(bubblegum.getName(), bubblegum);
         drugsMap.put(buffout.getName(), buffout);
         drugsMap.put(cigarettes.getName(), cigarettes);
         drugsMap.put(cookie.getName(), cookie);

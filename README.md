@@ -113,3 +113,6 @@ Test season 4 update <br>
 -moved Mutant and Nightkin masteries to support perks (for now, later maybe new panel with species only)<br>
 -added note to Sniper mastery<br>
 -changed Tank mastery effect<br>
+
+**28.08.2024**<br>
+-added Bubblegum to drugs <br>

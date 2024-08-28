@@ -13,6 +13,7 @@ public class MovementSpeed extends Stat {
     private int heavyHanded;
     //private int rightKnee;
     private int actionBoy;
+    private int bubblegum;
 
     public MovementSpeed(String name) {
         super(name);
@@ -26,6 +27,7 @@ public class MovementSpeed extends Stat {
         heavyHanded = 0;
         //rightKnee = 0;
         actionBoy = 0;
+        bubblegum = 0;
     }
 
     @Override
@@ -62,10 +64,11 @@ public class MovementSpeed extends Stat {
 
         smallFrame = character.getTraits().getTraitByName("Small Frame").isTaken()? 1 : 0;
         heavyHanded = character.getTraits().getTraitByName("Heavy Handed").isTaken()? 1 : 0;
+        bubblegum = character.getDrugs().getDrugByName("Bubblegum").isTaken()? 1 : 0;
 
         //rightKnee = character.getImplants().getImplantByName("Right Knee").isTaken()? 1 : 0;
 
-        int finalValue = 5 * heaveHo + 5 * dodger + 5 * actionBoy + 5 * /*bonusHthDamage*/closeCombatMaster + /*5 * bonusHthAttacks */+ 10 * bonusMove + 5 * smallFrame - 10 * heavyHanded /* + 5 * rightKnee*/;
+        int finalValue = 5 * heaveHo + 5 * dodger + 5 * actionBoy + 5 * /*bonusHthDamage*/closeCombatMaster + /*5 * bonusHthAttacks */+ 10 * bonusMove + 5 * smallFrame - 10 * heavyHanded /* + 5 * rightKnee*/ + 5 * bubblegum;
 
         /*cap*/
         if (finalValue > 40 ){
