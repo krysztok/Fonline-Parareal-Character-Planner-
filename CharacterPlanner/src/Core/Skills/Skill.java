@@ -131,4 +131,8 @@ public abstract class Skill {
     public String getSkillValueString(){
         return Integer.toString(getSkillValue());
     }
+
+    public void setSkillAdded(int skillAdded) {
+        this.skillAdded = skillAdded;
+    }
 }

@@ -37,7 +37,7 @@ public class ToolTipsGenerator {
         traitsTipsMap.put("Fast Metabolism", "<html>Fast Metabolism <br> (+) healing rate every 10s instead of every 60s <br> <font color=\"red\">(-) halved duration of drug effects</font></html>");
         traitsTipsMap.put("Fast Shot", "<html>Fast Shot <br> (+) -1 AP cost for single shots (Single-handed weapons with aim mode) <br> (+) -2 AP cost for single shots (Two-handed weapons with aim mode) <br> (+)  +5 flat damage <br> <font color=\"red\">(-) Not possible to make aimed shots</font></html>");
         traitsTipsMap.put("Finesse", "<html>Finesse <br> (+) +10% to critical chance <br> (+) reduces enemy's base armor critical chance mod by 25% <br> <font color=\"red\">(-) +30 to your target's DR</font></html>");
-        traitsTipsMap.put("Gifted", "<html>Gifted <br> (+) +1 to all SPECIAL stats <br> <font color=\"red\">(-) -5 skill points per level </font></html>");
+        traitsTipsMap.put("Gifted", "<html>Gifted <br> (+) +1 to all SPECIAL stats <br> <font color=\"red\">(-) -15 to all skill points </font></html>");
         traitsTipsMap.put("Good Natured", "<html>Good Natured <br> (+) +50 party points <br> <font color=\"red\">(-) can't own slaves </font></html>");
         traitsTipsMap.put("Heavy Handed", "<html>Heavy Handed <br> (+) +5 melee damage and chance to knock opponents down <br> <font color=\"red\">(-) -10 penalty to Movement Speed </font></html>");
         traitsTipsMap.put("Jinxed", "<html>Jinxed <br> (+) 50% chance for critical failure when enemy misses <br> <font color=\"red\">(-) 50% chance for critical failure when you miss </font></html>");

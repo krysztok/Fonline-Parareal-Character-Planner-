@@ -91,6 +91,8 @@ public class Traits {
                 character.getSpecials().changeSpecialWithTrait("Agility", 1, true);
                 character.getSpecials().changeSpecialWithTrait("Luck", 1, true);
 
+                character.getSkills().changeAllSkillsByValue(-15);
+
                 //character.getSpecials().changeSpecialPointsByValue(5);
             }
 
@@ -106,6 +108,7 @@ public class Traits {
                 character.getSpecials().changeSpecialWithTrait("Agility", -1, true);
                 character.getSpecials().changeSpecialWithTrait("Luck", -1, true);
 
+                character.getSkills().changeAllSkillsByValue(15);
                 //character.getSpecials().changeSpecialPointsByValue(-5);
             }
         };

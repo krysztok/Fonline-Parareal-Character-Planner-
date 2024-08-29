@@ -20,9 +20,10 @@ public class Skills {
             void calculateBaseValue(Character character) {
                 int boneyardGuard = character.getSupportPerks().getPerkByName("Boneyard Guard sg").isTaken()? 1 : 0;
                 int tagged = isSkillTagged()? 20:0;
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
                 //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                int agility = character.getSpecials().getSpecialByName("Agility").getBase();
+                int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 setSkillBase(5 + 4 * agility + 10 * boneyardGuard + tagged /*- gifted*/);
             }
         };
@@ -30,11 +31,12 @@ public class Skills {
         Skill bigGuns = new Skill("Big Guns",300) {
             @Override
             void calculateBaseValue(Character character) {
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
                 int boneyardGuard = character.getSupportPerks().getPerkByName("Boneyard Guard bg").isTaken()? 1 : 0;
                 int tagged = isSkillTagged()? 20:0;
                 //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                int agility = character.getSpecials().getSpecialByName("Agility").getBase();
+                int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 setSkillBase(2 * agility + 10 * boneyardGuard + tagged /*- gifted*/);
             }
         };
@@ -42,11 +44,12 @@ public class Skills {
         Skill energyWeapons = new Skill("Energy Weapons",300) {
             @Override
             void calculateBaseValue(Character character) {
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
                 int boneyardGuard = character.getSupportPerks().getPerkByName("Boneyard Guard ew").isTaken()? 1 : 0;
                 int tagged = isSkillTagged()? 20:0;
                 //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                int agility = character.getSpecials().getSpecialByName("Agility").getBase();
+                int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 setSkillBase(2 * agility + 10 * boneyardGuard + tagged /*- gifted*/);
             }
         };
@@ -54,12 +57,13 @@ public class Skills {
         Skill closeCombat = new Skill("Close Combat", 300) {
             @Override
             void calculateBaseValue(Character character) {
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
                 int boneyardGuard = character.getSupportPerks().getPerkByName("Boneyard Guard cc").isTaken()? 1 : 0;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                int strength = character.getSpecials().getSpecialByName("Strength").getBase();
-                int agility = character.getSpecials().getSpecialByName("Agility").getBase();
+                int strength = character.getSpecials().getSpecialByName("Strength").getBase() - gifted;
+                int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 setSkillBase(30 + 2 * (strength + agility) + 10 * boneyardGuard + tagged /*- gifted*/);
             }
         };
@@ -67,22 +71,25 @@ public class Skills {
         Skill scavenger = new Skill("Scavenging", 300) {
             @Override
             void calculateBaseValue(Character character) {
-                int tagged = isSkillTagged()? 20:0;
+                //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                //int tagged = isSkillTagged()? 20:0;
                 //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
-                int luck = character.getSpecials().getSpecialByName("Luck").getBase();
+                //int luck = character.getSpecials().getSpecialByName("Luck").getBase() - gifted;
 
-                setSkillBase(luck + tagged /*- gifted*/);
+               // setSkillBase(luck + tagged /*- gifted*/);
+                setSkillBase(0);
             }
         };
 
         Skill throwing = new Skill("Throwing", 300) {
             @Override
             void calculateBaseValue(Character character) {
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
                 int boneyardGuard = character.getSupportPerks().getPerkByName("Boneyard Guard th").isTaken()? 1 : 0;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                int agility = character.getSpecials().getSpecialByName("Agility").getBase();
+                int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 setSkillBase(4 * agility + 10 * boneyardGuard + tagged /*- gifted*/);
             }
         };
@@ -90,8 +97,9 @@ public class Skills {
         Skill firstAid = new Skill("First Aid",200) {
             @Override
             void calculateBaseValue(Character character) {
-                int perception = character.getSpecials().getSpecialByName("Perception").getBase();
-                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int perception = character.getSpecials().getSpecialByName("Perception").getBase() - gifted;
+                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -102,8 +110,9 @@ public class Skills {
         Skill doctor = new Skill("Doctor",200) {
             @Override
             void calculateBaseValue(Character character) {
-                int perception = character.getSpecials().getSpecialByName("Perception").getBase();
-                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int perception = character.getSpecials().getSpecialByName("Perception").getBase() - gifted;
+                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -114,7 +123,8 @@ public class Skills {
         Skill sneak = new Skill("Sneak",300) {
             @Override
             void calculateBaseValue(Character character) {
-                int agility = character.getSpecials().getSpecialByName("Agility").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -125,8 +135,9 @@ public class Skills {
         Skill lockpick = new Skill("Lockpick",150) {
             @Override
             void calculateBaseValue(Character character) {
-                int perception = character.getSpecials().getSpecialByName("Perception").getBase();
-                int agility = character.getSpecials().getSpecialByName("Agility").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int perception = character.getSpecials().getSpecialByName("Perception").getBase() - gifted;
+                int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -137,7 +148,8 @@ public class Skills {
         Skill steal = new Skill("Steal",150) {
             @Override
             void calculateBaseValue(Character character) {
-                int agility = character.getSpecials().getSpecialByName("Agility").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                 //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -148,8 +160,9 @@ public class Skills {
         Skill traps = new Skill("Traps",150) {
             @Override
             void calculateBaseValue(Character character) {
-                int perception = character.getSpecials().getSpecialByName("Perception").getBase();
-                int agility = character.getSpecials().getSpecialByName("Agility").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int perception = character.getSpecials().getSpecialByName("Perception").getBase() - gifted;
+                int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
              //   int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -157,10 +170,11 @@ public class Skills {
             }
         };
 
-        Skill science = new Skill("Science",125) {
+        Skill science = new Skill("Science",150) {
             @Override
             void calculateBaseValue(Character character) {
-                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -168,10 +182,11 @@ public class Skills {
             }
         };
 
-        Skill repair = new Skill("Repair",125) {
+        Skill repair = new Skill("Repair",150) {
             @Override
             void calculateBaseValue(Character character) {
-                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -182,7 +197,8 @@ public class Skills {
         Skill speech = new Skill("Speech",300) {
             @Override
             void calculateBaseValue(Character character) {
-                int charisma = character.getSpecials().getSpecialByName("Charisma").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int charisma = character.getSpecials().getSpecialByName("Charisma").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
               //  int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -193,7 +209,8 @@ public class Skills {
         Skill barter = new Skill("Barter",150) {
             @Override
             void calculateBaseValue(Character character) {
-                int charisma = character.getSpecials().getSpecialByName("Charisma").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int charisma = character.getSpecials().getSpecialByName("Charisma").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
               //  int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -204,7 +221,8 @@ public class Skills {
         Skill gambling = new Skill("Gambling",300) {
             @Override
             void calculateBaseValue(Character character) {
-                int luck = character.getSpecials().getSpecialByName("Luck").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int luck = character.getSpecials().getSpecialByName("Luck").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
               //  int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -215,8 +233,9 @@ public class Skills {
         Skill outdoorsman = new Skill("Outdoorsman",175) {
             @Override
             void calculateBaseValue(Character character) {
-                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase();
-                int endurance = character.getSpecials().getSpecialByName("Endurance").getBase();
+                int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
+                int endurance = character.getSpecials().getSpecialByName("Endurance").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
               //  int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
@@ -334,6 +353,13 @@ public class Skills {
             skill.removePointFromTmp();
             skillPoints += skill.getCost();
         }
+    }
+
+    public void changeAllSkillsByValue(int value) {
+        skillsMap.forEach((name, skill) -> {
+            int finalValue = skill.getSkillAdded() + value;
+            skill.setSkillAdded(finalValue);
+        });
     }
 
     public void confirmSkills(){

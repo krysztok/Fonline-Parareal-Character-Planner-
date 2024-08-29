@@ -116,3 +116,11 @@ Test season 4 update <br>
 
 **28.08.2024**<br>
 -added Bubblegum to drugs <br>
+
+**29.08.2024**<br>
+-changed skill cap of repair and science to 150 <br>
+-changed skill points per level (17 until 30lvl, 9 after) <br>
+-changed Scavenging base value to 0 <br>
+-changed Gifted effect <br>
+-changed base posion resistance formula to 10 + 4xEndurance <br>
+-changed base radiation resistance formula to 10 + Endurance <br>

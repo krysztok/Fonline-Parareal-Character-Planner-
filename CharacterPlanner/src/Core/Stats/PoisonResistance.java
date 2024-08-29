@@ -24,7 +24,8 @@ public class PoisonResistance extends Stat {
         snakeater = character.getSupportPerks().getPerkByName("Snakeater").isTaken()? 1 : 0;
         liverBox = character.getImplants().getImplantByName("Liver Box").isTaken()? 1 : 0;
 
-        int finalValue = 5 * enImpsAndPerks + 30 * snakeater + 10 * radResistance - 10 * bruiser + 15 * liverBox;
+        //int finalValue = 5 * enImpsAndPerks + 30 * snakeater + 10 * radResistance - 10 * bruiser + 15 * liverBox;
+        int finalValue = 10 + 4 * enImpsAndPerks + 30 * snakeater + 10 * radResistance - 10 * bruiser + 15 * liverBox;
 
         /*cap*/
         if (finalValue > 95 ){
