@@ -35,7 +35,7 @@ public class ToolTipsGenerator {
                 "                level<br>Both the bonus and penalty are doubled when taken with Bruiser Trait <br> <font color=\"red\">(-) -1 Charisma</font><br> <font color=\"orange\">NOTE: +35 hp total (+70 with Bruiser trait)</font></html>");
         traitsTipsMap.put("Chem Reliant", "<html>Chem Reliant <br> (+) doubled durration of drugs effects <br> <font color=\"red\">(-) -1/3 to current Hit Points healed with medicines</font></html>");
         traitsTipsMap.put("Fast Metabolism", "<html>Fast Metabolism <br> (+) healing rate every 10s instead of every 60s <br> <font color=\"red\">(-) halved duration of drug effects</font></html>");
-        traitsTipsMap.put("Fast Shot", "<html>Fast Shot <br> (+) -1 AP cost for single shots (Single-handed weapons with aim mode) <br> (+) -2 AP cost for single shots (Two-handed weapons with aim mode) <br> (+)  +5 flat damage <br> <font color=\"red\">(-) Not possible to make aimed shots</font></html>");
+        traitsTipsMap.put("Fast Shot", "<html>Fast Shot <br> (+) -1 AP cost for single shots (Single-handed weapons with aim mode) <br> (+) -2 AP cost for single shots (Two-handed weapons with aim mode) <br> (+)  +5 flat damage <br> (+) Chance to hit random body part  <br>  <font color=\"red\">(-) Not possible to make aimed shots</font></html>");
         traitsTipsMap.put("Finesse", "<html>Finesse <br> (+) +10% to critical chance <br> (+) reduces enemy's base armor critical chance mod by 25% <br> <font color=\"red\">(-) +30 to your target's DR</font></html>");
         traitsTipsMap.put("Gifted", "<html>Gifted <br> (+) +1 to all SPECIAL stats <br> <font color=\"red\">(-) -15 to all skill points </font></html>");
         traitsTipsMap.put("Good Natured", "<html>Good Natured <br> (+) +50 party points <br> <font color=\"red\">(-) can't own slaves </font></html>");
@@ -270,7 +270,7 @@ public class ToolTipsGenerator {
         supportsTipsMap.put("Dead Man Walking", "<html>Dead Man Walking<br> (+) Doubled negative HP capacity<br> Requirements: <br>");
         supportsTipsMap.put("Demolition Expert", "<html>Demolition Expert<br> (+) No unwanted explosions and extra damage for the wanted ones<br> Requirements: <br>");
         supportsTipsMap.put("Dismantler", "<html>Dismantler<br> (+) Doubled amount of resources received from dismantling items<br> Requirements: <br>");
-        supportsTipsMap.put("Educated", "<html>Educated<br> (+) +2 to Skill Points per level <br> Requirements: <br>");
+        supportsTipsMap.put("Educated", "<html>Educated<br> (+) +10 SP to all non-combat skills <br> Requirements: <br>");
         supportsTipsMap.put("Explorer", "<html>Explorer<br> (+) Faster world map travelling<br> Requirements: <br>");
         supportsTipsMap.put("Faster Healing", "<html>Faster Healing<br> (+) +20 Healing Rate<br> Requirements: <br>");
         supportsTipsMap.put("Fortune Finder", "<html>Fortune Finder<br> (+) Find additional caps during random encounters or from backpacks<br> Requirements: <br>");

@@ -124,3 +124,10 @@ Test season 4 update <br>
 -changed Gifted effect <br>
 -changed base posion resistance formula to 10 + 4xEndurance <br>
 -changed base radiation resistance formula to 10 + Endurance <br>
+
+**09.09.2024**<br>
+-fixed visual bug with slightly moved GUI elements <br>
+-fixed radiation and posion base resistance values (changelog 2) <br>
+-changed Fast Shot trait description (changelog 2) <br>
+-added requirement to Sniper Mastery (changelog 2) <br>
+-changed effect of Educated support perk (changelog 5) <br>

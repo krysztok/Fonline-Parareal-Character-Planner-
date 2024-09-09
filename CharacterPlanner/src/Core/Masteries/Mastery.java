@@ -10,12 +10,19 @@ import java.util.List;
 public class Mastery {
     private String name;
     private Boolean taken;
-    private LevelRequirement levelRequirement;
+    List<Requirement> requirements;
 
     public Mastery(String name, LevelRequirement levelRequirement) {
         this.name = name;
         taken = false;
-        this.levelRequirement = levelRequirement;
+        this.requirements = new ArrayList<>();
+        requirements.add(levelRequirement);
+    }
+
+    public Mastery (String name, List<Requirement> requirements) {
+        this.name = name;
+        this.taken = false;
+        this.requirements = requirements;
     }
 
     public String getName() {
@@ -31,13 +38,17 @@ public class Mastery {
     }
 
     public List<Requirement> getRequirements() {
-        List<Requirement> requirements = new ArrayList<>();
-        requirements.add(levelRequirement);
         return requirements;
     }
 
     public Boolean meetsRequirements(){
-        return levelRequirement.isAvailable;
+        for(int i = 0; i < requirements.size(); i++){
+            if(!requirements.get(i).isAvailable) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public boolean takeMastery(){

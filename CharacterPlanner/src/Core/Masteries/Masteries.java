@@ -4,6 +4,7 @@ package Core.Masteries;
 import Core.Character;
 import Core.Requirements.LevelRequirement;
 import Core.Requirements.Requirement;
+import Core.Requirements.SpecialRequirement;
 
 import java.util.*;
 
@@ -20,7 +21,13 @@ public class Masteries {
         //Mastery mutant = new Mastery("Mutant", levelReq);
         //Mastery nightkin = new Mastery("Nightkin", levelReq);
         Mastery rambo = new Mastery("Rambo", levelReq);
-        Mastery sniper = new Mastery("Sniper", levelReq);
+
+        List<Requirement> sniperReqs = new ArrayList<>();
+        sniperReqs.add(levelReq);
+        SpecialRequirement int5Req = new SpecialRequirement("Intelligence",5, true);
+        sniperReqs.add(int5Req);
+        Mastery sniper = new Mastery("Sniper", sniperReqs);
+
         Mastery sweetScience = new Mastery("Sweet Science", levelReq);
         Mastery tank = new Mastery("Tank", levelReq);
         Mastery dragoon = new Mastery("Dragoon", levelReq);

@@ -41,6 +41,7 @@ public class GUI extends JPanel {
     ImageIcon[] negativeNumbers;
     Color transparentColor, debug1Color, debug2Color, greenColor, redColor, notAvailableColor, takenColor, notConfirmedColor, mouseOverColor;
     Map<String, Color> colorsMap;
+    BufferedImage bgImage;
     Icon bigButtonIcon, bigButtonPushedIcon, smallButtonIcon, smallButtonPushedIcon, minusIcon, minusPushedIcon,
             plusIcon, plusPushedIcon, plus1Icon, plus1PushedIcon, plus5Icon, plus5PushedIcon, allIcon, allPushedIcon;
     Map<String, Icon> iconsMap;
@@ -51,8 +52,15 @@ public class GUI extends JPanel {
         debug = false;
         setLayout(null);
         setOpaque(false);
-        width = 1129;
-        height = 867;
+
+        try {
+            bgImage = ImageIO.read(getClass().getResource("/resources/graphics/background.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        width = bgImage.getWidth();
+        height = bgImage.getHeight();
         setSize(width,height);
         setPreferredSize(new Dimension(width, height));
         //setBounds(0, 0, width, height);
@@ -97,6 +105,8 @@ public class GUI extends JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
 
         iconsMap = new LinkedHashMap<>();
         bigButtonIcon = new ImageIcon(getClass().getResource("/resources/graphics/bigButton.png"));
@@ -214,9 +224,8 @@ public class GUI extends JPanel {
     }
 
     public void printScreen() throws IOException {
-        BufferedImage img = ImageIO.read(getClass().getResource("/resources/graphics/background.png"));
-        this.paint(img.getGraphics());
-        BufferedImage img2 = img.getSubimage(0,0,1113,828); // cut image
+        BufferedImage image = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+        paint(image.getGraphics());
 
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Specify a file to save");
@@ -231,7 +240,7 @@ public class GUI extends JPanel {
                 if (!fileName.endsWith(".png")) {
                     fileToSave = new File(fileName + ".png");
                 }
-                ImageIO.write(img2, "png", fileToSave);
+                ImageIO.write(image, "png", fileToSave);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -325,6 +334,16 @@ public class GUI extends JPanel {
 
     public void refreshSupportsTips(Map<String, String> supportsTipsMap) {
         supportsPanel.refreshTips(supportsTipsMap);
+    }
+    @Override
+    protected void paintComponent(Graphics g) {
+
+        super.paintComponent(g);
+        g.drawImage(bgImage, 0, 0, this);
+    }
+
+    public BufferedImage getBgImage() {
+        return bgImage;
     }
 }
 

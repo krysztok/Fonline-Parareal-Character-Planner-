@@ -30,8 +30,8 @@ public class RadiationResistance extends Stat {
         radX = character.getDrugs().getDrugByName("Rad-X").isTaken()? 1 : 0;
         liver = character.getDrugs().getDrugByName("Liver").isTaken()? 1 : 0;
 
-        //int finalValue = 2 * enImpsAndPerks + 20 * snakeater + 10 * radResistance - 10 * bruiser + 15 * liverBox + 20 * radX + 20 * liver;
-        int finalValue = 10 + enImpsAndPerks + 20 * snakeater + 10 * radResistance - 10 * bruiser + 15 * liverBox + 20 * radX + 20 * liver;
+        int finalValue = 2 * enImpsAndPerks + 20 * snakeater + 10 * radResistance - 10 * bruiser + 15 * liverBox + 20 * radX + 20 * liver;
+        //int finalValue = 10 + enImpsAndPerks + 20 * snakeater + 10 * radResistance - 10 * bruiser + 15 * liverBox + 20 * radX + 20 * liver;
 
         /*cap*/
         if (finalValue > 95 ){

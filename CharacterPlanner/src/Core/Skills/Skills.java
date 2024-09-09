@@ -71,13 +71,14 @@ public class Skills {
         Skill scavenger = new Skill("Scavenging", 300) {
             @Override
             void calculateBaseValue(Character character) {
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
                 //int tagged = isSkillTagged()? 20:0;
                 //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
                 //int luck = character.getSpecials().getSpecialByName("Luck").getBase() - gifted;
 
                // setSkillBase(luck + tagged /*- gifted*/);
-                setSkillBase(0);
+                setSkillBase(0 + 10 * educated);
             }
         };
 
@@ -100,10 +101,11 @@ public class Skills {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
                 int perception = character.getSpecials().getSpecialByName("Perception").getBase() - gifted;
                 int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(2 * (perception + intelligence) + tagged /*- gifted*/);
+                setSkillBase(2 * (perception + intelligence) + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -111,12 +113,13 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int perception = character.getSpecials().getSpecialByName("Perception").getBase() - gifted;
                 int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(5 + perception + intelligence + tagged /*- gifted*/);
+                setSkillBase(5 + perception + intelligence + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -124,11 +127,12 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(5 + 3 * agility + tagged /*- gifted*/);
+                setSkillBase(5 + 3 * agility + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -136,12 +140,13 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int perception = character.getSpecials().getSpecialByName("Perception").getBase() - gifted;
                 int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(10 + perception + agility + tagged /*- gifted*/);
+                setSkillBase(10 + perception + agility + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -149,11 +154,12 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                 //int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(3 * agility + tagged /*- gifted*/);
+                setSkillBase(3 * agility + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -161,12 +167,13 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int perception = character.getSpecials().getSpecialByName("Perception").getBase() - gifted;
                 int agility = character.getSpecials().getSpecialByName("Agility").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
              //   int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(10 + perception + agility + tagged /*- gifted*/);
+                setSkillBase(10 + perception + agility + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -174,11 +181,12 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(4 * intelligence + tagged /*- gifted*/);
+                setSkillBase(4 * intelligence + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -186,11 +194,12 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
                // int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(3 * intelligence + tagged /*- gifted*/);
+                setSkillBase(3 * intelligence + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -198,11 +207,12 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int charisma = character.getSpecials().getSpecialByName("Charisma").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
               //  int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(5 * charisma + tagged /*- gifted*/);
+                setSkillBase(5 * charisma + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -210,11 +220,12 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int charisma = character.getSpecials().getSpecialByName("Charisma").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
               //  int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(4 * charisma + tagged /*- gifted*/);
+                setSkillBase(4 * charisma + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -222,11 +233,12 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int luck = character.getSpecials().getSpecialByName("Luck").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
               //  int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(5 * luck + tagged /*- gifted*/);
+                setSkillBase(5 * luck + tagged + 10 * educated /*- gifted*/);
             }
         };
 
@@ -234,12 +246,13 @@ public class Skills {
             @Override
             void calculateBaseValue(Character character) {
                 int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 1 : 0;
+                int educated = character.getSupportPerks().getPerkByName("Educated").isTaken()? 1 : 0;
                 int intelligence = character.getSpecials().getSpecialByName("Intelligence").getBase() - gifted;
                 int endurance = character.getSpecials().getSpecialByName("Endurance").getBase() - gifted;
                 int tagged = isSkillTagged()? 20:0;
               //  int gifted = character.getTraits().getTraitByName("Gifted").isTaken()? 10 : 0;
 
-                setSkillBase(2 * (intelligence + endurance) + tagged /*- gifted*/);
+                setSkillBase(2 * (intelligence + endurance) + tagged + 10 * educated /*- gifted*/);
             }
         };
 
