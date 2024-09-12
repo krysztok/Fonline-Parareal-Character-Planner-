@@ -114,6 +114,7 @@ public class Perks {
         SkillRequirement sn150Req = new SkillRequirement(sn, 150, true);
         SkillRequirement sn175Req = new SkillRequirement(sn, 175, true);
         SkillRequirement th100Req = new SkillRequirement(th, 100, true);
+        SkillRequirement th125Req = new SkillRequirement(th, 125, true);
         SkillRequirement th150Req = new SkillRequirement(th, 150, true);
 
         SkillRequirement gunsSkills100Req = new SkillRequirement(gunsSkills, 100, true);
@@ -223,7 +224,7 @@ public class Perks {
         //Perk htHCriticals = new Perk("HtH Criticals", level15Req, cc175Req);
         Perk dodger1 = new Perk("Dodger(1)", dodger1Reqs);
         Perk dodger2 = new Perk("Dodger(2)", dodger2Reqs);
-        Perk earlierSequence = new Perk("Earlier Sequence", level3Req, pe5Req);
+        //Perk earlierSequence = new Perk("Earlier Sequence", level3Req, pe5Req);
         Perk evenMoreCriticals = new Perk("Even More Criticals", level6Req, combatSkills125Req);
         Perk fieldMedic = new Perk("Field Medic", fieldMedicReqs);
         Perk gainAgility = new Perk("Gain Agility", level12Req, ag9orLessReq);
@@ -234,8 +235,8 @@ public class Perks {
         Perk gainPerception = new Perk("Gain Perception", level12Req, pe9orLessReq);
         Perk gainStrength = new Perk("Gain Strength", level12Req, st9orLessReq);
         Perk ghost = new Perk("Ghost", level12Req, sn150Req);
-        Perk heaveHo1 = new Perk("Heave Ho!", level6Req, th100Req);
-        Perk heaveHo2 = new Perk("Heave Ho!!", level9Req, th150Req);
+        Perk heaveHo1 = new Perk("Heave Ho!", level9Req, th125Req);
+        //Perk heaveHo2 = new Perk("Heave Ho!!", level9Req, th150Req);
         Perk hitTheGaps = new Perk("Hit the Gaps", level12Req, meleeSkills150Req);
         //Perk hthEvade = new Perk("HtH Evade", level6Req, cc75Req);
         //Perk hthEvade2 = new Perk("HtH Evade+", level9Req, cc150Req);
@@ -283,7 +284,7 @@ public class Perks {
         perksMap.put(closeCombatMaster.getName(), closeCombatMaster);
         perksMap.put(dodger1.getName(), dodger1);
         perksMap.put(dodger2.getName(), dodger2);
-        perksMap.put(earlierSequence.getName(), earlierSequence);
+        //perksMap.put(earlierSequence.getName(), earlierSequence);
         perksMap.put(evenMoreCriticals.getName(), evenMoreCriticals);
         perksMap.put(fieldMedic.getName(), fieldMedic);
         perksMap.put(gainAgility.getName(), gainAgility);
@@ -295,7 +296,7 @@ public class Perks {
         perksMap.put(gainStrength.getName(), gainStrength);
         perksMap.put(ghost.getName(), ghost);
         perksMap.put(heaveHo1.getName(), heaveHo1);
-        perksMap.put(heaveHo2.getName(), heaveHo2);
+        //perksMap.put(heaveHo2.getName(), heaveHo2);
         perksMap.put(hitTheGaps.getName(), hitTheGaps);
         //perksMap.put(htHCriticals.getName(), htHCriticals);
         //perksMap.put(hthEvade.getName(), hthEvade);

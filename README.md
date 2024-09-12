@@ -131,3 +131,9 @@ Test season 4 update <br>
 -changed Fast Shot trait description (changelog 2) <br>
 -added requirement to Sniper Mastery (changelog 2) <br>
 -changed effect of Educated support perk (changelog 5) <br>
+
+**12.09.2024**<br>
+-changed effect of Gain SPECIAL perks (+2 instead of +1)<br>
+-removed Earlier Sequence perk<br>
+-merged Heave Ho! perks<br>
+-changed effect of Straight Shooter support perk<br>

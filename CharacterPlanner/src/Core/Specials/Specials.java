@@ -34,7 +34,7 @@ public class Specials {
             void calculateWithPerksAndImplantsValue(Character character) {
                 int gainSpecial = character.getPerks().getPerkByName("Gain Strength").isTaken()? 1 : 0;
                 int specialImplant = character.getImplants().getImplantByName("SPECIAL +1 ST").isTaken()? 1 : 0;
-                int value = getBase() + gainSpecial + specialImplant;
+                int value = getBase() + 2 * gainSpecial + specialImplant;
                 setWithPerksAndImplants(value > 10? 10 : value);
             }
         };
@@ -64,7 +64,7 @@ public class Specials {
             void calculateWithPerksAndImplantsValue(Character character) {
                 int gainSpecial = character.getPerks().getPerkByName("Gain Perception").isTaken()? 1 : 0;
                 int specialImplant = character.getImplants().getImplantByName("SPECIAL +1 PE").isTaken()? 1 : 0;
-                int value = getBase() + gainSpecial + specialImplant;
+                int value = getBase() + 2 * gainSpecial + specialImplant;
                 setWithPerksAndImplants(value > 10? 10 : value);
             }
         };
@@ -91,7 +91,7 @@ public class Specials {
             void calculateWithPerksAndImplantsValue(Character character) {
                 int gainSpecial = character.getPerks().getPerkByName("Gain Endurance").isTaken()? 1 : 0;
                 int specialImplant = character.getImplants().getImplantByName("SPECIAL +1 EN").isTaken()? 1 : 0;
-                int value = getBase() + gainSpecial + specialImplant;
+                int value = getBase() + 2 * gainSpecial + specialImplant;
                 setWithPerksAndImplants(value > 10? 10 : value);
             }
         };
@@ -118,7 +118,7 @@ public class Specials {
                 int gainSpecial = character.getPerks().getPerkByName("Gain Charisma").isTaken()? 1 : 0;
                 int specialImplant = character.getImplants().getImplantByName("SPECIAL +1 CH").isTaken()? 1 : 0;
                 int theGoodDoctor = character.getSupportPerks().getPerkByName("The Good Doctor").isTaken()? 1 : 0;
-                int value = getBase() + gainSpecial + specialImplant + theGoodDoctor;
+                int value = getBase() + 2 * gainSpecial + specialImplant + theGoodDoctor;
                 setWithPerksAndImplants(value > 10? 10 : value);
             }
         };
@@ -139,7 +139,7 @@ public class Specials {
             void calculateWithPerksAndImplantsValue(Character character) {
                 int gainSpecial = character.getPerks().getPerkByName("Gain Intelligence").isTaken()? 1 : 0;
                 int specialImplant = character.getImplants().getImplantByName("SPECIAL +1 IN").isTaken()? 1 : 0;
-                int value = getBase() + gainSpecial + specialImplant;
+                int value = getBase() + 2 * gainSpecial + specialImplant;
                 setWithPerksAndImplants(value > 10? 10 : value);
             }
         };
@@ -162,7 +162,7 @@ public class Specials {
             void calculateWithPerksAndImplantsValue(Character character) {
                 int gainSpecial = character.getPerks().getPerkByName("Gain Agility").isTaken()? 1 : 0;
                 int specialImplant = character.getImplants().getImplantByName("SPECIAL +1 AG").isTaken()? 1 : 0;
-                int value = getBase() + gainSpecial + specialImplant;
+                int value = getBase() + 2 * gainSpecial + specialImplant;
                 setWithPerksAndImplants(value > 10? 10 : value);
             }
         };
@@ -183,7 +183,7 @@ public class Specials {
             void calculateWithPerksAndImplantsValue(Character character) {
                 int gainSpecial = character.getPerks().getPerkByName("Gain Luck").isTaken()? 1 : 0;
                 int specialImplant = character.getImplants().getImplantByName("SPECIAL +1 LK").isTaken()? 1 : 0;
-                int value = getBase() + gainSpecial + specialImplant;
+                int value = getBase() + 2 * gainSpecial + specialImplant;
                 setWithPerksAndImplants(value > 10? 10 : value);
             }
         };

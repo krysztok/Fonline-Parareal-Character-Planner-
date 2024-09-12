@@ -32,13 +32,15 @@ public class MovementSpeed extends Stat {
 
     @Override
     void calculateValue(Character character) {
-        heaveHo = 0;
+        /*heaveHo = 0;
         if (character.getPerks().getPerkByName("Heave Ho!").isTaken()){
             heaveHo = 1;
             if (character.getPerks().getPerkByName("Heave Ho!!").isTaken()){
                 heaveHo = 2;
             }
-        }
+        }*/
+
+        heaveHo = character.getPerks().getPerkByName("Heave Ho!").isTaken()? 1 : 0;
 
         actionBoy = 0;
         if (character.getPerks().getPerkByName("Action Boy(1)").isTaken()){
